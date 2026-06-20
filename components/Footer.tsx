@@ -19,9 +19,14 @@ export default function Footer() {
               <div className="w-10 h-10 bg-primary rounded-full flex items-center justify-center text-secondary font-bold text-xs border-2 border-secondary overflow-hidden">
                 AIW
               </div>
-              <span className="font-display font-bold text-xl tracking-tight">
-                Aal e Imran Welfare
-              </span>
+              <div className="flex flex-col">
+                <span className="font-display font-bold text-xl tracking-tight leading-none">
+                  Aal e Imran Welfare
+                </span>
+                <span className="urdu text-sm leading-none mt-1">
+                  آل عمران ویلفیئر
+                </span>
+              </div>
             </div>
             <p className="text-gray-400 leading-relaxed">
               {t.footer.tagline}
@@ -52,11 +57,11 @@ export default function Footer() {
           <div>
             <h4 className="font-display text-xl mb-6 text-secondary">{t.footer.ourPrograms}</h4>
             <ul className="space-y-4 text-gray-400">
-              <li><Link href="#" className="hover:text-white transition-colors">Aal e Imran Yateem Khana</Link></li>
-              <li><Link href="#" className="hover:text-white transition-colors">Zainab e Alia</Link></li>
-              <li><Link href="#" className="hover:text-white transition-colors">Orphan Sponsorship</Link></li>
-              <li><Link href="#" className="hover:text-white transition-colors">Qurbani Program</Link></li>
-              <li><Link href="#" className="hover:text-white transition-colors">Zakat Calculator</Link></li>
+              <li><Link href="#" className="hover:text-white transition-colors">{t.footer.programs.yateemKhana}</Link></li>
+              <li><Link href="#" className="hover:text-white transition-colors">{t.footer.programs.zainabAlia}</Link></li>
+              <li><Link href="#" className="hover:text-white transition-colors">{t.footer.programs.orphanSponsorship}</Link></li>
+              <li><Link href="#" className="hover:text-white transition-colors">{t.footer.programs.qurbani}</Link></li>
+              <li><Link href="#" className="hover:text-white transition-colors">{t.footer.programs.zakat}</Link></li>
             </ul>
           </div>
 

@@ -89,40 +89,43 @@ export default function About() {
             </div>
 
             {/* Value Cards */}
-            <div className="grid grid-cols-1 md:grid-cols-3 gap-6 mb-12">
-              <motion.div
-                whileHover={{ y: -5 }}
-                className="bg-white p-6 rounded-xl shadow-sm border border-gray-100"
-              >
-                <div className="w-12 h-12 bg-primary/10 text-primary rounded-lg flex items-center justify-center mb-4">
-                  <Shield size={24} />
-                </div>
-                <h4 className="font-bold mb-2">{t.about.values.faith.title}</h4>
-                <p className="text-sm text-dark/70">{t.about.values.faith.desc}</p>
-              </motion.div>
-
-              <motion.div
-                whileHover={{ y: -5 }}
-                className="bg-white p-6 rounded-xl shadow-sm border border-gray-100"
-              >
-                <div className="w-12 h-12 bg-primary/10 text-primary rounded-lg flex items-center justify-center mb-4">
-                  <Heart size={24} />
-                </div>
-                <h4 className="font-bold mb-2">{t.about.values.compassion.title}</h4>
-                <p className="text-sm text-dark/70">{t.about.values.compassion.desc}</p>
-              </motion.div>
-
-              <motion.div
-                whileHover={{ y: -5 }}
-                className="bg-white p-6 rounded-xl shadow-sm border border-gray-100"
-              >
-                <div className="w-12 h-12 bg-primary/10 text-primary rounded-lg flex items-center justify-center mb-4">
-                  <Users size={24} />
-                </div>
-                <h4 className="font-bold mb-2">{t.about.values.transparency.title}</h4>
-                <p className="text-sm text-dark/70">{t.about.values.transparency.desc}</p>
-              </motion.div>
-            </div>
+            <motion.div
+              variants={{
+                hidden: { opacity: 0 },
+                show: {
+                  opacity: 1,
+                  transition: {
+                    staggerChildren: 0.2
+                  }
+                }
+              }}
+              initial="hidden"
+              whileInView="show"
+              viewport={{ once: true }}
+              className="grid grid-cols-1 md:grid-cols-3 gap-6 mb-12"
+            >
+              {[
+                { icon: Shield, title: t.about.values.faith.title, desc: t.about.values.faith.desc },
+                { icon: Heart, title: t.about.values.compassion.title, desc: t.about.values.compassion.desc },
+                { icon: Users, title: t.about.values.transparency.title, desc: t.about.values.transparency.desc }
+              ].map((value, index) => (
+                <motion.div
+                  key={index}
+                  variants={{
+                    hidden: { opacity: 0, y: 20 },
+                    show: { opacity: 1, y: 0 }
+                  }}
+                  whileHover={{ y: -5 }}
+                  className="bg-white p-6 rounded-xl shadow-sm border border-gray-100"
+                >
+                  <div className="w-12 h-12 bg-primary/10 text-primary rounded-lg flex items-center justify-center mb-4">
+                    <value.icon size={24} />
+                  </div>
+                  <h4 className="font-bold mb-2">{value.title}</h4>
+                  <p className="text-sm text-dark/70">{value.desc}</p>
+                </motion.div>
+              ))}
+            </motion.div>
 
             <div>
               <Link

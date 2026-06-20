@@ -62,6 +62,13 @@ export const translations = {
       whatsapp: "WhatsApp: [PLACEHOLDER — +92 300 0000000]",
       rights: "© 2025 Aal e Imran Welfare. All Rights Reserved.",
       madeWith: "Made with ❤️ for Humanity",
+      programs: {
+        yateemKhana: "Aal e Imran Yateem Khana",
+        zainabAlia: "Zainab e Alia",
+        orphanSponsorship: "Orphan Sponsorship",
+        qurbani: "Qurbani Program",
+        zakat: "Zakat Calculator",
+      }
     },
     whatsappTooltip: "Chat with us on WhatsApp",
   },
@@ -126,6 +133,13 @@ export const translations = {
       whatsapp: "واٹس ایپ: [PLACEHOLDER — +92 300 0000000]",
       rights: "© 2025 آل عمران ویلفیئر۔ جملہ حقوق محفوظ ہیں۔",
       madeWith: "انسانیت کے لیے ❤️ کے ساتھ بنایا گیا",
+      programs: {
+        yateemKhana: "آل عمران یتیم خانہ",
+        zainabAlia: "زینب عالیہ",
+        orphanSponsorship: "یتیم کفالت",
+        qurbani: "قربانی پروگرام",
+        zakat: "زکوٰۃ کیلکولیٹر",
+      }
     },
     whatsappTooltip: "ہم سے واٹس ایپ پر بات کریں",
   },

@@ -35,8 +35,37 @@ export default function Navbar() {
     { name: t.nav.blog, href: '#blog' },
     { name: t.nav.events, href: '#events' },
     { name: t.nav.qurbani, href: '#qurbani' },
+    { name: t.nav.donate, href: '#donate' },
     { name: t.nav.contact, href: '#contact' },
   ];
+
+  const [activeSection, setActiveSection] = useState('home');
+
+  useEffect(() => {
+    const observerOptions = {
+      root: null,
+      rootMargin: '-50% 0px -50% 0px',
+      threshold: 0
+    };
+
+    const observerCallback = (entries: IntersectionObserverEntry[]) => {
+      entries.forEach((entry) => {
+        if (entry.isIntersecting) {
+          setActiveSection(entry.target.id);
+        }
+      });
+    };
+
+    const observer = new IntersectionObserver(observerCallback, observerOptions);
+
+    const sections = ['home', 'about', 'projects', 'gallery', 'blog', 'events', 'qurbani', 'donate', 'contact'];
+    sections.forEach(id => {
+      const element = document.getElementById(id);
+      if (element) observer.observe(element);
+    });
+
+    return () => observer.disconnect();
+  }, []);
 
   return (
     <motion.nav
@@ -66,19 +95,26 @@ export default function Navbar() {
 
         {/* Desktop Navigation */}
         <div className="hidden lg:flex items-center space-x-6">
-          {navLinks.map((link) => (
-            <Link
-              key={link.name}
-              href={link.href}
-              className={cn(
-                "relative text-sm font-medium transition-colors hover:text-secondary group",
-                isScrolled ? "text-dark" : "text-white"
-              )}
-            >
-              {link.name}
-              <span className="absolute -bottom-1 left-0 w-0 h-0.5 bg-primary transition-all duration-300 group-hover:w-full" />
-            </Link>
-          ))}
+          {navLinks.map((link) => {
+            const isActive = activeSection === link.href.replace('#', '');
+            return (
+              <Link
+                key={link.name}
+                href={link.href}
+                className={cn(
+                  "relative text-sm font-medium transition-colors hover:text-secondary group",
+                  isScrolled ? "text-dark" : "text-white",
+                  isActive && "text-primary font-bold"
+                )}
+              >
+                {link.name}
+                <span className={cn(
+                  "absolute -bottom-1 left-0 h-0.5 bg-primary transition-all duration-300 group-hover:w-full",
+                  isActive ? "w-full" : "w-0"
+                )} />
+              </Link>
+            );
+          })}
         </div>
 
         {/* Right Side Items */}
