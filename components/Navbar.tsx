@@ -34,6 +34,7 @@ export default function Navbar() {
   const navLinks = [
     { name: t.nav.home, href: isHomePage ? '#home' : '/' },
     { name: t.nav.about, href: isHomePage ? '#about' : '/#about' },
+    { name: t.nav.team, href: '/team' },
     { name: t.nav.projects, href: '/projects' },
     { name: t.nav.gallery, href: isHomePage ? '#gallery' : '/#gallery' },
     { name: t.nav.blog, href: isHomePage ? '#blog' : '/#blog' },
@@ -48,6 +49,7 @@ export default function Navbar() {
   useEffect(() => {
     if (!isHomePage) {
       if (pathname === '/projects') setActiveSection('projects');
+      if (pathname === '/team') setActiveSection('team');
       return;
     }
 
@@ -104,7 +106,9 @@ export default function Navbar() {
         {/* Desktop Navigation */}
         <div className="hidden lg:flex items-center space-x-6">
           {navLinks.map((link) => {
-            const isActive = activeSection === link.href.replace('#', '') || (link.href === '/projects' && pathname === '/projects');
+            const isActive = activeSection === link.href.replace('#', '') ||
+                           (link.href === '/projects' && pathname === '/projects') ||
+                           (link.href === '/team' && pathname === '/team');
             return (
               <Link
                 key={link.name}
@@ -130,7 +134,7 @@ export default function Navbar() {
           <Search className={cn("w-5 h-5 cursor-pointer hover:text-secondary transition-colors", (isScrolled || !isHomePage) ? "text-dark" : "text-white")} />
           <LanguageToggle />
           <Link
-            href="#donate"
+            href={isHomePage ? "#donate" : "/#donate"}
             className="bg-secondary text-white px-6 py-2 rounded-full font-bold hover:bg-opacity-90 hover:scale-105 transition-all duration-300 shadow-md"
           >
             {t.nav.donateNow}
@@ -173,7 +177,7 @@ export default function Navbar() {
                 <LanguageToggle />
               </div>
               <Link
-                href="#donate"
+                href={isHomePage ? "#donate" : "/#donate"}
                 onClick={() => setIsMobileMenuOpen(false)}
                 className="bg-secondary text-white text-center py-3 rounded-xl font-bold hover:bg-opacity-90 transition-all"
               >

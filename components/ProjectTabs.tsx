@@ -20,9 +20,9 @@ const YateemKhanaTab = () => {
   ];
 
   const stats = [
-    { label: t.projects.yateemKhana.stats.orphans, value: '50+' },
+    { label: t.projects.yateemKhana.stats.orphans, value: '50' },
     { label: t.projects.yateemKhana.stats.meals, value: '150+' },
-    { label: t.projects.yateemKhana.stats.years, value: '10+' },
+    { label: t.projects.yateemKhana.stats.years, value: '16+' },
     { label: t.projects.yateemKhana.stats.cost, value: 'Rs. 7,500' },
   ];
 
@@ -99,7 +99,7 @@ const YateemKhanaTab = () => {
             {t.projects.yateemKhana.cta.hadithRef}
           </p>
           <Link
-            href="#sponsorship"
+            href="/#donate"
             className="inline-block bg-secondary text-primary px-10 py-4 rounded-full font-bold text-lg hover:bg-white transition-colors shadow-lg"
           >
             <span className={isUrdu ? "urdu" : ""}>{t.projects.yateemKhana.cta.button}</span>
@@ -179,10 +179,10 @@ const ZainabAliaTab = () => {
   ];
 
   const stats = [
-    { label: t.projects.zainabAlia.stats.orphans, value: '30+' },
+    { label: t.projects.zainabAlia.stats.orphans, value: '50' },
     { label: t.projects.zainabAlia.stats.students, value: '100+' },
-    { label: t.projects.zainabAlia.stats.pumps, value: '65+' },
-    { label: t.projects.zainabAlia.stats.families, value: '200+' },
+    { label: t.projects.zainabAlia.stats.pumps, value: '77' },
+    { label: t.projects.zainabAlia.stats.families, value: '500+' },
   ];
 
   const galleryImages = [
@@ -223,7 +223,7 @@ const ZainabAliaTab = () => {
             </div>
             <h3 className={isUrdu ? "urdu text-2xl mb-4" : "text-2xl font-display text-primary mb-4"}>{p.title}</h3>
             <div className="bg-secondary/10 text-secondary inline-block px-4 py-1 rounded-full font-bold mb-6 self-start">
-              {p.fee} / month
+              {p.fee}
             </div>
             <p className={isUrdu ? "urdu text-dark/70 mb-6 text-sm" : "text-dark/70 mb-6 text-sm leading-relaxed"}>
               {p.purpose}
@@ -236,7 +236,7 @@ const ZainabAliaTab = () => {
               ))}
             </div>
             <Link
-              href="#sponsorship"
+              href="/#donate"
               className="block text-center py-4 rounded-xl border-2 border-primary text-primary font-bold hover:bg-primary hover:text-white transition-all shadow-sm"
             >
               <span className={isUrdu ? "urdu" : ""}>{p.button}</span>

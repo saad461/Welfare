@@ -45,21 +45,21 @@ export default function Hero() {
       >
         <motion.p
           variants={itemVariants}
-          className="text-secondary font-bold tracking-widest uppercase mb-4 text-sm md:text-base"
+          className={isUrdu ? "urdu text-secondary font-bold tracking-widest uppercase mb-4 text-sm md:text-base" : "text-secondary font-bold tracking-widest uppercase mb-4 text-sm md:text-base"}
         >
           {t.hero.eyebrow}
         </motion.p>
 
         <motion.h1
           variants={itemVariants}
-          className="text-white mb-6"
+          className={isUrdu ? "urdu text-white mb-6" : "text-white mb-6"}
         >
           {t.hero.heading}
         </motion.h1>
 
         <motion.p
           variants={itemVariants}
-          className="text-white/90 mb-10 max-w-2xl mx-auto"
+          className={isUrdu ? "urdu text-white/90 mb-10 max-w-2xl mx-auto" : "text-white/90 mb-10 max-w-2xl mx-auto"}
         >
           {t.hero.subheading}
         </motion.p>
@@ -72,13 +72,13 @@ export default function Hero() {
             href="#donate"
             className="w-full sm:w-auto bg-secondary text-white px-8 py-4 rounded-full font-bold hover:scale-105 transition-transform duration-300"
           >
-            {t.hero.ctaDonate}
+            <span className={isUrdu ? "urdu" : ""}>{t.hero.ctaDonate}</span>
           </Link>
           <Link
-            href="#projects"
+            href="/projects"
             className="w-full sm:w-auto border-2 border-white text-white px-8 py-4 rounded-full font-bold hover:bg-white hover:text-primary transition-all duration-300"
           >
-            {t.hero.ctaProjects}
+            <span className={isUrdu ? "urdu" : ""}>{t.hero.ctaProjects}</span>
           </Link>
         </motion.div>
 
@@ -86,10 +86,10 @@ export default function Hero() {
           variants={itemVariants}
           className="grid grid-cols-1 sm:grid-cols-3 gap-4"
         >
-          {[t.hero.stats.orphans, t.hero.stats.women, t.hero.stats.years].map((stat, i) => (
+          {[t.hero.stats.orphans, t.hero.stats.widows, t.hero.stats.years].map((stat, i) => (
             <div
               key={i}
-              className="bg-white/10 backdrop-blur-md border border-white/20 rounded-full px-6 py-2 text-white font-medium"
+              className={isUrdu ? "urdu bg-white/10 backdrop-blur-md border border-white/20 rounded-full px-6 py-2 text-white font-medium" : "bg-white/10 backdrop-blur-md border border-white/20 rounded-full px-6 py-2 text-white font-medium"}
             >
               {stat}
             </div>
