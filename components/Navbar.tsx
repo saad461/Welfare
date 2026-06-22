@@ -7,6 +7,7 @@ import { motion, AnimatePresence } from 'framer-motion';
 import { Menu, X, Search } from 'lucide-react';
 import { useLanguage } from '@/context/LanguageContext';
 import LanguageToggle from './LanguageToggle';
+import { usePathname } from 'next/navigation';
 import { clsx, type ClassValue } from 'clsx';
 import { twMerge } from 'tailwind-merge';
 
@@ -18,6 +19,7 @@ export default function Navbar() {
   const [isScrolled, setIsScrolled] = useState(false);
   const [isMobileMenuOpen, setIsMobileMenuOpen] = useState(false);
   const { t, isUrdu } = useLanguage();
+  const pathname = usePathname();
 
   useEffect(() => {
     const handleScroll = () => {
@@ -27,21 +29,28 @@ export default function Navbar() {
     return () => window.removeEventListener('scroll', handleScroll);
   }, []);
 
+  const isHomePage = pathname === '/';
+
   const navLinks = [
-    { name: t.nav.home, href: '#home' },
-    { name: t.nav.about, href: '#about' },
-    { name: t.nav.projects, href: '#projects' },
-    { name: t.nav.gallery, href: '#gallery' },
-    { name: t.nav.blog, href: '#blog' },
-    { name: t.nav.events, href: '#events' },
-    { name: t.nav.qurbani, href: '#qurbani' },
-    { name: t.nav.donate, href: '#donate' },
-    { name: t.nav.contact, href: '#contact' },
+    { name: t.nav.home, href: isHomePage ? '#home' : '/' },
+    { name: t.nav.about, href: isHomePage ? '#about' : '/#about' },
+    { name: t.nav.projects, href: '/projects' },
+    { name: t.nav.gallery, href: isHomePage ? '#gallery' : '/#gallery' },
+    { name: t.nav.blog, href: isHomePage ? '#blog' : '/#blog' },
+    { name: t.nav.events, href: isHomePage ? '#events' : '/#events' },
+    { name: t.nav.qurbani, href: isHomePage ? '#qurbani' : '/#qurbani' },
+    { name: t.nav.donate, href: isHomePage ? '#donate' : '/#donate' },
+    { name: t.nav.contact, href: isHomePage ? '#contact' : '/#contact' },
   ];
 
   const [activeSection, setActiveSection] = useState('home');
 
   useEffect(() => {
+    if (!isHomePage) {
+      if (pathname === '/projects') setActiveSection('projects');
+      return;
+    }
+
     const observerOptions = {
       root: null,
       rootMargin: '-50% 0px -50% 0px',
@@ -58,14 +67,14 @@ export default function Navbar() {
 
     const observer = new IntersectionObserver(observerCallback, observerOptions);
 
-    const sections = ['home', 'about', 'projects', 'gallery', 'blog', 'events', 'qurbani', 'donate', 'contact'];
+    const sections = ['home', 'about', 'gallery', 'blog', 'events', 'qurbani', 'donate', 'contact'];
     sections.forEach(id => {
       const element = document.getElementById(id);
       if (element) observer.observe(element);
     });
 
     return () => observer.disconnect();
-  }, []);
+  }, [isHomePage, pathname]);
 
   return (
     <motion.nav
@@ -73,21 +82,20 @@ export default function Navbar() {
       animate={{ y: 0 }}
       className={cn(
         'fixed top-0 left-0 right-0 z-50 transition-all duration-300 px-6 py-4',
-        isScrolled ? 'glass-nav py-3' : 'bg-transparent'
+        (isScrolled || !isHomePage) ? 'glass-nav py-3 shadow-md' : 'bg-transparent'
       )}
     >
       <div className="max-w-7xl mx-auto flex items-center justify-between">
         {/* Logo and Name */}
         <Link href="/" className="flex items-center space-x-3">
           <div className="w-10 h-10 bg-primary rounded-full flex items-center justify-center text-secondary font-bold text-xs border-2 border-secondary overflow-hidden relative">
-             {/* Placeholder for /public/images/logo.png */}
-             <span className="z-10">AIW</span>
+             <Image src="/images/logo/cropped-Colorful-Happy-Day-of-Charity-Instagram-Post-1.webp" alt="Logo" fill className="object-cover" />
           </div>
           <div className="flex flex-col">
-            <span className={cn("font-display font-bold text-lg leading-none", isScrolled ? "text-primary" : "text-white")}>
+            <span className={cn("font-display font-bold text-lg leading-none", (isScrolled || !isHomePage) ? "text-primary" : "text-white")}>
               Aal e Imran Welfare
             </span>
-            <span className={cn("urdu text-sm leading-none mt-1", isScrolled ? "text-primary" : "text-white")}>
+            <span className={cn("urdu text-sm leading-none mt-1", (isScrolled || !isHomePage) ? "text-primary" : "text-white")}>
               آل عمران ویلفیئر
             </span>
           </div>
@@ -96,14 +104,14 @@ export default function Navbar() {
         {/* Desktop Navigation */}
         <div className="hidden lg:flex items-center space-x-6">
           {navLinks.map((link) => {
-            const isActive = activeSection === link.href.replace('#', '');
+            const isActive = activeSection === link.href.replace('#', '') || (link.href === '/projects' && pathname === '/projects');
             return (
               <Link
                 key={link.name}
                 href={link.href}
                 className={cn(
                   "relative text-sm font-medium transition-colors hover:text-secondary group",
-                  isScrolled ? "text-dark" : "text-white",
+                  (isScrolled || !isHomePage) ? "text-dark" : "text-white",
                   isActive && "text-primary font-bold"
                 )}
               >
@@ -119,7 +127,7 @@ export default function Navbar() {
 
         {/* Right Side Items */}
         <div className="hidden lg:flex items-center space-x-6">
-          <Search className={cn("w-5 h-5 cursor-pointer hover:text-secondary transition-colors", isScrolled ? "text-dark" : "text-white")} />
+          <Search className={cn("w-5 h-5 cursor-pointer hover:text-secondary transition-colors", (isScrolled || !isHomePage) ? "text-dark" : "text-white")} />
           <LanguageToggle />
           <Link
             href="#donate"
@@ -133,7 +141,7 @@ export default function Navbar() {
         <div className="lg:hidden flex items-center space-x-4">
           <button
             onClick={() => setIsMobileMenuOpen(!isMobileMenuOpen)}
-            className={cn(isScrolled ? "text-dark" : "text-white")}
+            className={cn((isScrolled || !isHomePage) ? "text-dark" : "text-white")}
           >
             {isMobileMenuOpen ? <X size={28} /> : <Menu size={28} />}
           </button>
