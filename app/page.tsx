@@ -4,7 +4,7 @@ import Navbar from "@/components/Navbar";
 import Hero from "@/components/Hero";
 import About from "@/components/About";
 import WhatWeDo from "@/components/WhatWeDo";
-import ZakatCalculator from "@/components/ZakatCalculator";
+import ZakatIntro from "@/components/ZakatIntro";
 import ImpactStats from "@/components/ImpactStats";
 import ProjectsPreview from "@/components/ProjectsPreview";
 import VideoSection from "@/components/VideoSection";
@@ -26,7 +26,7 @@ export default function Home() {
       <WhatWeDo />
 
       {/* Zakat Section */}
-      <ZakatCalculator />
+      <ZakatIntro />
 
       <ImpactStats />
       <ProjectsPreview />

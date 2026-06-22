@@ -297,6 +297,11 @@ export const translations = {
     zakat: {
       heading: "Calculate Your Zakat 2026",
       subtitle: "Fulfill your religious obligation with ease. Zakat is 2.5% of all qualifying wealth held for one full lunar year above the Nisab threshold.",
+      intro: {
+        title: "Calculate Your Zakat",
+        description: "Quickly and accurately calculate your Zakat obligation for 2026 using our easy-to-use tool.",
+        button: "Calculate Your Zakat"
+      },
       nisabBox: {
         title: "Current Nisab Threshold 2026",
         gold: "Gold Nisab: 87.48 grams of gold",
@@ -744,6 +749,11 @@ export const translations = {
     zakat: {
       heading: "اپنی زکوٰۃ 2026 حساب کریں",
       subtitle: "اپنی دینی ذمہ داری آسانی سے ادا کریں۔ زکوٰۃ نصاب سے زائد تمام مال کا 2.5 فیصد ہے جو ایک قمری سال تک آپ کے پاس رہا ہو۔",
+      intro: {
+        title: "اپنی زکوٰۃ کا حساب لگائیں",
+        description: "ہمارے آسان استعمال ہونے والے ٹول کے ذریعے 2026 کے لیے اپنی زکوٰۃ کی واجب الادا رقم کا فوری اور درست حساب لگائیں۔",
+        button: "اپنی زکوٰۃ کا حساب لگائیں"
+      },
       nisabBox: {
         title: "موجودہ نصاب 2026",
         gold: "سونے کا نصاب: 87.48 گرام سونا",
