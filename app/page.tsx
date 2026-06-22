@@ -19,7 +19,7 @@ export default function Home() {
   const { t, isUrdu } = useLanguage();
 
   return (
-    <main className="min-h-screen">
+    <main className="min-h-screen overflow-x-hidden">
       <Navbar />
       <Hero />
       <About />

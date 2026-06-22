@@ -4,6 +4,7 @@ import React from 'react';
 import { motion } from 'framer-motion';
 import { useLanguage } from '@/context/LanguageContext';
 import Link from 'next/link';
+import Image from 'next/image';
 import { Heart, Shield, Users } from 'lucide-react';
 import { clsx, type ClassValue } from 'clsx';
 import { twMerge } from 'tailwind-merge';
@@ -30,9 +31,16 @@ export default function About() {
               transition={{ duration: 0.8 }}
               className="relative"
             >
-              {/* Main Placeholder Image Card */}
-              <div className="aspect-[4/5] bg-gradient-to-br from-primary to-dark rounded-3xl overflow-hidden shadow-2xl flex items-center justify-center">
-                <span className="text-white/20 font-display text-2xl">Organization Image</span>
+              {/* Main Image Card */}
+              <div className="aspect-[4/5] bg-gradient-to-br from-primary to-dark rounded-3xl overflow-hidden shadow-2xl relative">
+                <Image
+                  src="/images/about/organization.webp"
+                  alt={t.about.altOrganization}
+                  fill
+                  className="object-cover object-right"
+                  sizes="(max-width: 768px) 100vw, 50vw"
+                  priority
+                />
               </div>
 
               {/* Overlapping Stat Cards */}

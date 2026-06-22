@@ -91,8 +91,8 @@ export default function Navbar() {
       <div className="max-w-7xl mx-auto flex items-center justify-between">
         {/* Logo and Name */}
         <Link href="/" className="flex items-center space-x-3">
-          <div className="w-10 h-10 bg-primary rounded-full flex items-center justify-center text-secondary font-bold text-xs border-2 border-secondary overflow-hidden relative">
-             <Image src="/images/logo/cropped-Colorful-Happy-Day-of-Charity-Instagram-Post-1.webp" alt="Logo" fill className="object-cover" />
+          <div className="w-12 h-12 flex items-center justify-center overflow-hidden relative">
+             <Image src="/images/logo/logo.webp" alt="Logo" fill className="object-contain" />
           </div>
           <div className="flex flex-col">
             <span className={cn("font-display font-bold text-lg leading-none", (isScrolled || !isHomePage) ? "text-primary" : "text-white")}>

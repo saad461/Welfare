@@ -53,6 +53,7 @@ export const translations = {
       learnMore: "Learn More About Us",
       statOrphans: "100+ Orphans Cared For",
       statYears: "16+ Years of Service",
+      altOrganization: "The dedicated team of Aal-e-Imran Welfare Organization",
     },
     manifesto: {
       heading: "Our Manifesto",
@@ -499,6 +500,7 @@ export const translations = {
       learnMore: "مزید جانیں",
       statOrphans: "100+ یتیموں کی دیکھ بھال",
       statYears: "16+ سالہ خدمت",
+      altOrganization: "آل عمران ویلفیئر آرگنائزیشن کی مخلص ٹیم",
     },
     manifesto: {
       heading: "ہمارا منشور",
