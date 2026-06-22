@@ -1,9 +1,11 @@
 import Navbar from "@/components/Navbar";
 import Hero from "@/components/Hero";
 import About from "@/components/About";
+import WhatWeDo from "@/components/WhatWeDo";
 import ImpactStats from "@/components/ImpactStats";
 import ProjectsPreview from "@/components/ProjectsPreview";
 import VideoSection from "@/components/VideoSection";
+import DonationSection from "@/components/DonationSection";
 import Footer from "@/components/Footer";
 import WhatsAppButton from "@/components/WhatsAppButton";
 
@@ -13,6 +15,7 @@ export default function Home() {
       <Navbar />
       <Hero />
       <About />
+      <WhatWeDo />
       <ImpactStats />
       <ProjectsPreview />
       <VideoSection />
@@ -38,6 +41,7 @@ export default function Home() {
         <h2 className="text-gray-300 font-display">Contact Section [Phase 10]</h2>
       </section>
 
+      <DonationSection />
       <Footer />
       <WhatsAppButton />
     </main>

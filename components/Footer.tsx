@@ -2,8 +2,9 @@
 
 import React from 'react';
 import Link from 'next/link';
-import { Facebook, Instagram, Youtube, Send } from 'lucide-react';
+import { Facebook, Instagram, Youtube, Send, Music2, Share2 } from 'lucide-react';
 import { useLanguage } from '@/context/LanguageContext';
+import { CONTACT_INFO, DONATION_INFO } from '@/lib/constants';
 
 export default function Footer() {
   const { t, isUrdu } = useLanguage();
@@ -28,71 +29,74 @@ export default function Footer() {
                 </span>
               </div>
             </div>
-            <p className="text-gray-400 leading-relaxed">
+            <p className={isUrdu ? "urdu text-gray-400 leading-relaxed" : "text-gray-400 leading-relaxed"}>
               {t.footer.tagline}
             </p>
             <div className="flex items-center space-x-4">
-              <Link href="#" className="hover:text-secondary transition-colors"><Facebook size={20} /></Link>
-              <Link href="#" className="hover:text-secondary transition-colors"><Instagram size={20} /></Link>
-              <Link href="#" className="hover:text-secondary transition-colors"><Youtube size={20} /></Link>
-              <Link href="#" className="hover:text-secondary transition-colors"><Send size={20} /></Link>
+              <a href={CONTACT_INFO.facebook} target="_blank" rel="noopener noreferrer" className="hover:text-secondary transition-colors"><Facebook size={20} /></a>
+              {/* TODO: Add real content for social links below */}
+              <a href="#" className="hover:text-secondary transition-colors opacity-50 cursor-not-allowed"><Instagram size={20} /></a>
+              <a href="#" className="hover:text-secondary transition-colors opacity-50 cursor-not-allowed"><Youtube size={20} /></a>
+              <a href="#" className="hover:text-secondary transition-colors opacity-50 cursor-not-allowed"><Share2 size={20} /></a>
             </div>
           </div>
 
           {/* Column 2 - Quick Links */}
           <div>
-            <h4 className="font-display text-xl mb-6 text-secondary">{t.footer.quickLinks}</h4>
+            <h4 className={isUrdu ? "urdu text-xl mb-6 text-secondary" : "font-display text-xl mb-6 text-secondary"}>{t.footer.quickLinks}</h4>
             <ul className="space-y-4 text-gray-400">
-              <li><Link href="#home" className="hover:text-white transition-colors">{t.nav.home}</Link></li>
-              <li><Link href="#about" className="hover:text-white transition-colors">{t.nav.about}</Link></li>
-              <li><Link href="#projects" className="hover:text-white transition-colors">{t.nav.projects}</Link></li>
-              <li><Link href="#gallery" className="hover:text-white transition-colors">{t.nav.gallery}</Link></li>
-              <li><Link href="#blog" className="hover:text-white transition-colors">{t.nav.blog}</Link></li>
-              <li><Link href="#events" className="hover:text-white transition-colors">{t.nav.events}</Link></li>
-              <li><Link href="#contact" className="hover:text-white transition-colors">{t.nav.contact}</Link></li>
+              <li><Link href="/" className="hover:text-white transition-colors">{t.nav.home}</Link></li>
+              <li><Link href="/#about" className="hover:text-white transition-colors">{t.nav.about}</Link></li>
+              <li><Link href="/team" className="hover:text-white transition-colors">{t.nav.team}</Link></li>
+              <li><Link href="/projects" className="hover:text-white transition-colors">{t.nav.projects}</Link></li>
+              <li><Link href="/#contact" className="hover:text-white transition-colors">{t.nav.contact}</Link></li>
             </ul>
           </div>
 
           {/* Column 3 - Our Programs */}
           <div>
-            <h4 className="font-display text-xl mb-6 text-secondary">{t.footer.ourPrograms}</h4>
+            <h4 className={isUrdu ? "urdu text-xl mb-6 text-secondary" : "font-display text-xl mb-6 text-secondary"}>{t.footer.ourPrograms}</h4>
             <ul className="space-y-4 text-gray-400">
-              <li><Link href="#" className="hover:text-white transition-colors">{t.footer.programs.yateemKhana}</Link></li>
-              <li><Link href="#" className="hover:text-white transition-colors">{t.footer.programs.zainabAlia}</Link></li>
-              <li><Link href="#" className="hover:text-white transition-colors">{t.footer.programs.orphanSponsorship}</Link></li>
-              <li><Link href="#" className="hover:text-white transition-colors">{t.footer.programs.qurbani}</Link></li>
-              <li><Link href="#" className="hover:text-white transition-colors">{t.footer.programs.zakat}</Link></li>
+              <li><Link href="/projects" className="hover:text-white transition-colors">{t.footer.programs.yateemKhana}</Link></li>
+              <li><Link href="/projects" className="hover:text-white transition-colors">{t.footer.programs.zainabAlia}</Link></li>
+              <li><Link href="/projects" className="hover:text-white transition-colors">{t.footer.programs.orphanSponsorship}</Link></li>
+              <li><Link href="/#qurbani" className="hover:text-white transition-colors">{t.footer.programs.qurbani}</Link></li>
             </ul>
           </div>
 
           {/* Column 4 - Contact */}
           <div>
-            <h4 className="font-display text-xl mb-6 text-secondary">{t.footer.contactUs}</h4>
+            <h4 className={isUrdu ? "urdu text-xl mb-6 text-secondary" : "font-display text-xl mb-6 text-secondary"}>{t.footer.contactUs}</h4>
             <ul className="space-y-4 text-gray-400">
               <li className="flex items-start space-x-3 text-sm">
-                <span>📍</span>
-                <span>{t.footer.address}</span>
+                <span className="flex-shrink-0">📍</span>
+                <span className={isUrdu ? "urdu" : ""}>{t.footer.address}</span>
               </li>
               <li className="flex items-center space-x-3 text-sm">
                 <span>📞</span>
-                <span>{t.footer.phone}</span>
+                <span>{CONTACT_INFO.phone}</span>
               </li>
               <li className="flex items-center space-x-3 text-sm">
                 <span>✉️</span>
-                <span>{t.footer.email}</span>
+                <span className="break-all">{CONTACT_INFO.email}</span>
               </li>
               <li className="flex items-center space-x-3 text-sm">
                 <span>💬</span>
-                <span>{t.footer.whatsapp}</span>
+                <span>{CONTACT_INFO.whatsapp}</span>
               </li>
             </ul>
+            <div className="mt-8 p-4 bg-white/5 rounded-xl border border-white/10">
+              <p className="text-[10px] uppercase tracking-widest text-gray-500 mb-2 font-bold">Bank Details</p>
+              <p className="text-xs text-secondary font-bold">{DONATION_INFO.bankName}</p>
+              <p className="text-[10px] font-mono text-gray-400 break-all mt-1">{DONATION_INFO.iban}</p>
+            </div>
           </div>
         </div>
 
         {/* Bottom Bar */}
         <div className="pt-8 border-t border-gray-800 flex flex-col md:flex-row justify-between items-center text-sm text-gray-500">
-          <p className="mb-4 md:mb-0">{t.footer.rights}</p>
-          <p className="flex items-center">
+          <p className={isUrdu ? "urdu mb-4 md:mb-0" : "mb-4 md:mb-0"}>{t.footer.rights}</p>
+          <p className={isUrdu ? "urdu flex items-center" : "flex items-center"}>
              {t.footer.madeWith}
           </p>
         </div>
