@@ -84,11 +84,11 @@ export default function Navbar() {
       initial={{ y: -100 }}
       animate={{ y: 0 }}
       className={cn(
-        'fixed top-0 left-0 right-0 z-50 transition-all duration-300 px-6 py-4',
-        (isScrolled || !isHomePage) ? 'glass-nav py-3 shadow-md' : 'bg-transparent'
+        'fixed top-0 left-0 right-0 z-50 transition-all duration-300 px-6 h-16 md:h-20 flex items-center',
+        (isScrolled || !isHomePage) ? 'glass-nav shadow-md' : 'bg-transparent'
       )}
     >
-      <div className="max-w-7xl mx-auto flex items-center justify-between">
+      <div className="w-full max-w-7xl mx-auto flex items-center justify-between">
         {/* Logo and Name */}
         <Link href="/" className="flex items-center space-x-3">
           <div className="w-12 h-12 flex items-center justify-center overflow-hidden relative">
@@ -160,7 +160,7 @@ export default function Navbar() {
             initial={{ opacity: 0, height: 0 }}
             animate={{ opacity: 1, height: 'auto' }}
             exit={{ opacity: 0, height: 0 }}
-            className="lg:hidden bg-white mt-4 rounded-2xl shadow-xl overflow-hidden"
+            className="lg:hidden bg-white mt-2 rounded-2xl shadow-xl overflow-hidden absolute top-full left-6 right-6 border border-gray-100"
           >
             <div className="p-6 flex flex-col space-y-4">
               {navLinks.map((link) => (

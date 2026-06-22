@@ -13,13 +13,13 @@ export const metadata: Metadata = {
 
 export default function ZakatPage() {
   return (
-    <main className="min-h-screen">
+    <>
       <Navbar />
-      <div className="pt-20">
+      <div className="pt-16 md:pt-20">
         <ZakatCalculator />
       </div>
       <Footer />
       <WhatsAppButton />
-    </main>
+    </>
   );
 }

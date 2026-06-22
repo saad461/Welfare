@@ -51,7 +51,9 @@ export default function RootLayout({
     <html lang="en">
       <body className={`${inter.variable} ${playfair.variable} ${notoUrdu.variable} antialiased`}>
         <LanguageProvider>
-          {children}
+          <main className="min-h-screen overflow-x-hidden">
+            {children}
+          </main>
         </LanguageProvider>
       </body>
     </html>

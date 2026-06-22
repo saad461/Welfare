@@ -25,7 +25,7 @@ export default function Hero() {
   };
 
   return (
-    <section id="home" className="relative h-screen w-full flex items-center justify-center overflow-hidden">
+    <section id="home" className="relative min-h-[100dvh] w-full flex flex-col items-center justify-center overflow-hidden pt-16 md:pt-20">
       {/* Background with Gradient and Placeholder Overlay */}
       <div
         className="absolute inset-0 z-0 bg-cover bg-center"
@@ -66,17 +66,17 @@ export default function Hero() {
 
         <motion.div
           variants={itemVariants}
-          className="flex flex-col sm:flex-row items-center justify-center gap-4 mb-16"
+          className="flex flex-row flex-wrap items-center justify-center gap-3 mt-6 mb-12"
         >
           <Link
             href="#donate"
-            className="w-full sm:w-auto bg-secondary text-white px-8 py-4 rounded-full font-bold hover:scale-105 transition-transform duration-300"
+            className="min-h-[44px] bg-secondary text-white px-5 py-2.5 rounded-full font-bold hover:scale-105 transition-transform duration-300 text-sm md:text-base md:px-8 md:py-4"
           >
             <span className={isUrdu ? "urdu" : ""}>{t.hero.ctaDonate}</span>
           </Link>
           <Link
             href="/projects"
-            className="w-full sm:w-auto border-2 border-white text-white px-8 py-4 rounded-full font-bold hover:bg-white hover:text-primary transition-all duration-300"
+            className="min-h-[44px] border-2 border-white text-white px-5 py-2.5 rounded-full font-bold hover:bg-white hover:text-primary transition-all duration-300 text-sm md:text-base md:px-8 md:py-4"
           >
             <span className={isUrdu ? "urdu" : ""}>{t.hero.ctaProjects}</span>
           </Link>
@@ -84,12 +84,12 @@ export default function Hero() {
 
         <motion.div
           variants={itemVariants}
-          className="grid grid-cols-1 sm:grid-cols-3 gap-4"
+          className="flex flex-row flex-wrap items-center justify-center gap-2 mt-4"
         >
           {[t.hero.stats.orphans, t.hero.stats.widows, t.hero.stats.years].map((stat, i) => (
             <div
               key={i}
-              className={isUrdu ? "urdu bg-white/10 backdrop-blur-md border border-white/20 rounded-full px-6 py-2 text-white font-medium" : "bg-white/10 backdrop-blur-md border border-white/20 rounded-full px-6 py-2 text-white font-medium"}
+              className={isUrdu ? "urdu bg-white/10 backdrop-blur-md border border-white/20 rounded-full px-3 py-1.5 text-white font-medium text-xs md:text-sm md:px-6 md:py-2" : "bg-white/10 backdrop-blur-md border border-white/20 rounded-full px-3 py-1.5 text-white font-medium text-xs md:text-sm md:px-6 md:py-2"}
             >
               {stat}
             </div>

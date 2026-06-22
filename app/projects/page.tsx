@@ -13,7 +13,7 @@ const ProjectHero = () => {
   const { t, isUrdu } = useLanguage();
 
   return (
-    <section className="relative pt-32 pb-20 px-6 bg-primary overflow-hidden">
+    <section className="relative pt-24 md:pt-32 pb-20 px-6 bg-primary overflow-hidden">
       <div className="absolute inset-0 bg-gradient-to-br from-primary to-dark opacity-90"></div>
 
       {/* Abstract Background Shapes */}
@@ -103,7 +103,7 @@ export default function ProjectsPage() {
   };
 
   return (
-    <main className="min-h-screen bg-background">
+    <>
       <Navbar />
       <ProjectHero />
       <ProjectOverview onSwitchTab={handleSwitchTab} />
@@ -114,6 +114,6 @@ export default function ProjectsPage() {
 
       <Footer />
       <WhatsAppButton />
-    </main>
+    </>
   );
 }

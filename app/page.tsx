@@ -19,7 +19,7 @@ export default function Home() {
   const { t, isUrdu } = useLanguage();
 
   return (
-    <main className="min-h-screen overflow-x-hidden">
+    <>
       <Navbar />
       <Hero />
       <About />
@@ -32,7 +32,7 @@ export default function Home() {
       <ProjectsPreview />
 
       {/* Sponsorship Preview Section */}
-      <section className="py-24 px-6 bg-background">
+      <section className="py-16 md:py-24 px-6 bg-background">
         <div className="max-w-7xl mx-auto text-center">
           <h2 className={`text-4xl md:text-5xl font-display font-bold text-dark mb-6 ${isUrdu ? 'urdu' : ''}`}>
             {isUrdu ? 'یتیم کی کفالت کریں' : 'Sponsor an Orphan'}
@@ -88,20 +88,20 @@ export default function Home() {
       <VideoSection />
 
       {/* Phase 1 Placeholders for other sections */}
-      <section id="gallery" className="py-24 px-6 bg-white flex items-center justify-center border-b border-gray-100">
+      <section id="gallery" className="py-16 md:py-24 px-6 bg-white flex items-center justify-center border-b border-gray-100">
         <h2 className="text-gray-300 font-display">Gallery Section [Phase 4]</h2>
       </section>
 
-      <section id="blog" className="py-24 px-6 bg-background flex items-center justify-center border-b border-gray-100">
+      <section id="blog" className="py-16 md:py-24 px-6 bg-background flex items-center justify-center border-b border-gray-100">
         <h2 className="text-gray-300 font-display">Blog Section [Phase 5]</h2>
       </section>
 
-      <section id="events" className="py-24 px-6 bg-white flex items-center justify-center border-b border-gray-100">
+      <section id="events" className="py-16 md:py-24 px-6 bg-white flex items-center justify-center border-b border-gray-100">
         <h2 className="text-gray-300 font-display">Events Section [Phase 6]</h2>
       </section>
 
       {/* Qurbani Preview Section */}
-      <section id="qurbani" className="py-24 px-6 bg-background">
+      <section id="qurbani" className="py-16 md:py-24 px-6 bg-background">
         <div className="max-w-7xl mx-auto">
           <div className="bg-primary rounded-[3rem] p-8 md:p-16 text-white overflow-hidden relative">
             <div className="relative z-10 flex flex-col md:flex-row items-center justify-between gap-8">
@@ -129,13 +129,13 @@ export default function Home() {
         </div>
       </section>
 
-      <section id="contact" className="py-24 px-6 bg-white flex items-center justify-center">
+      <section id="contact" className="py-16 md:py-24 px-6 bg-white flex items-center justify-center">
         <h2 className="text-gray-300 font-display">Contact Section [Phase 10]</h2>
       </section>
 
       <DonationSection />
       <Footer />
       <WhatsAppButton />
-    </main>
+    </>
   );
 }

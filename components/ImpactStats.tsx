@@ -76,7 +76,7 @@ export default function ImpactStats() {
   ];
 
   return (
-    <section id="impact" className="py-20 bg-primary text-white overflow-hidden">
+    <section id="impact" className="py-16 md:py-20 bg-primary text-white overflow-hidden">
       <div className="max-w-7xl mx-auto px-6">
         <div className="text-center mb-16">
           <motion.h2

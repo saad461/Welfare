@@ -17,7 +17,7 @@ export default function DonationSection() {
   };
 
   return (
-    <section id="donate" className="py-24 px-6 bg-background overflow-hidden">
+    <section id="donate" className="py-16 md:py-24 px-6 bg-background overflow-hidden">
       <div className="max-w-7xl mx-auto">
         <div className="text-center mb-16">
           <motion.h2
@@ -59,7 +59,7 @@ export default function DonationSection() {
             initial={{ x: -50, opacity: 0 }}
             whileInView={{ x: 0, opacity: 1 }}
             viewport={{ once: true }}
-            className="bg-white p-10 rounded-3xl shadow-xl border border-gray-100 relative overflow-hidden"
+            className="bg-white p-6 md:p-10 rounded-3xl shadow-xl border border-gray-100 relative overflow-hidden"
           >
             <div className="absolute top-0 right-0 bg-primary text-white px-6 py-2 rounded-bl-2xl font-bold text-sm flex items-center gap-2">
               <Check size={16} /> {t.donation.bankTransfer.zakatBadge}
@@ -103,7 +103,7 @@ export default function DonationSection() {
             viewport={{ once: true }}
             className="flex flex-col gap-6"
           >
-            <div className="bg-primary p-10 rounded-3xl text-white shadow-xl flex-1">
+            <div className="bg-primary p-6 md:p-10 rounded-3xl text-white shadow-xl flex-1">
               <h3 className={isUrdu ? "urdu text-2xl mb-8" : "text-2xl font-display mb-8"}>
                 {t.donation.quickContact.heading}
               </h3>

@@ -19,7 +19,7 @@ export default function About() {
 
   return (
     <>
-      <section id="about" className="py-24 px-6 bg-background overflow-hidden">
+      <section id="about" className="py-16 md:py-24 px-6 bg-background overflow-hidden">
         <div className="max-w-7xl mx-auto">
           <div className="grid grid-cols-1 lg:grid-cols-2 gap-16 items-center">
 
@@ -85,11 +85,11 @@ export default function About() {
               </div>
 
               {/* Quran Ayah Box */}
-              <div className="bg-white p-8 rounded-2xl border-l-8 border-secondary shadow-sm mb-10">
-                <p className="urdu text-2xl text-primary text-center mb-4">
+              <div className="bg-white p-6 md:p-8 rounded-2xl border-l-8 border-secondary shadow-sm mb-10">
+                <p className="urdu text-xl md:text-2xl text-primary text-center mb-4">
                   {t.about.quranAyah}
                 </p>
-                <p className={cn("text-center font-medium italic text-dark/60", isUrdu && "urdu")}>
+                <p className={cn("text-center text-sm md:text-base font-medium italic text-dark/60", isUrdu && "urdu")}>
                   {isUrdu ? "اور وہ اس کی محبت میں (خود اپنی ضرورت کے باوجود) مسکین، یتیم اور قیدی کو کھانا کھلاتے ہیں۔" : "And they give food in spite of love for it to the needy, the orphan, and the captive"}
                 </p>
                 <p className="text-center text-sm font-medium italic text-dark/40 mt-2">
