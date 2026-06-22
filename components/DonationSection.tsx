@@ -17,7 +17,7 @@ export default function DonationSection() {
   };
 
   return (
-    <section id="donate" className="py-24 px-6 bg-background">
+    <section id="donate" className="py-24 px-6 bg-background overflow-hidden">
       <div className="max-w-7xl mx-auto">
         <div className="text-center mb-16">
           <motion.h2
