@@ -57,25 +57,33 @@ CREATE TABLE donations (
 );
 
 -- Orphan sponsors table
+DROP TABLE IF EXISTS sponsors;
 CREATE TABLE sponsors (
   id UUID DEFAULT gen_random_uuid() PRIMARY KEY,
-  sponsor_name TEXT,
-  phone TEXT,
+  sponsor_name TEXT NOT NULL,
+  phone TEXT NOT NULL,
   email TEXT,
   cnic TEXT,
   tier TEXT,
   project TEXT,
+  how_heard TEXT,
+  message TEXT,
   created_at TIMESTAMP DEFAULT NOW()
 );
 
 -- Qurbani bookings table
+DROP TABLE IF EXISTS qurbani_bookings;
 CREATE TABLE qurbani_bookings (
   id UUID DEFAULT gen_random_uuid() PRIMARY KEY,
-  name TEXT,
-  phone TEXT,
+  name TEXT NOT NULL,
+  phone TEXT NOT NULL,
+  whatsapp TEXT,
+  email TEXT,
   animal_type TEXT,
-  shares INTEGER,
+  shares INTEGER DEFAULT 1,
   city TEXT,
+  year INTEGER DEFAULT 2027,
+  status TEXT DEFAULT 'interest',
   created_at TIMESTAMP DEFAULT NOW()
 );
 

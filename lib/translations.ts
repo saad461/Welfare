@@ -11,6 +11,8 @@ export const translations = {
       blog: "Blog",
       events: "Events",
       qurbani: "Qurbani",
+      sponsor: "Sponsor",
+      zakat: "Zakat",
       donate: "Donate",
       contact: "Contact",
       donateNow: "Donate Now",
@@ -292,6 +294,159 @@ export const translations = {
       }
     },
     whatsappTooltip: "Chat with us on WhatsApp",
+    zakat: {
+      heading: "Calculate Your Zakat 2026",
+      subtitle: "Fulfill your religious obligation with ease. Zakat is 2.5% of all qualifying wealth held for one full lunar year above the Nisab threshold.",
+      nisabBox: {
+        title: "Current Nisab Threshold 2026",
+        gold: "Gold Nisab: 87.48 grams of gold",
+        silver: "Silver Nisab: 612.36 grams of silver",
+        instruction: "Use the LOWER of the two values.",
+        goldRate: "Current Gold Rate: PKR 21,000/gram (approx)",
+        silverRate: "Current Silver Rate: PKR 250/gram (approx)",
+        goldValue: "Gold Nisab Value: ~PKR 1,837,080",
+        silverValue: "Silver Nisab Value: ~PKR 153,090",
+        finalNisab: "Nisab (using silver): ~PKR 153,090",
+        note: "Gold/silver rates are approximate. Please verify current rates before calculating."
+      },
+      fields: {
+        cash: { label: "Cash & Bank Savings (PKR)", placeholder: "Enter total cash and savings" },
+        gold: { label: "Gold Value (PKR)", placeholder: "Enter current market value" },
+        silver: { label: "Silver Value (PKR)", placeholder: "Enter current market value" },
+        business: { label: "Business Inventory (PKR)", placeholder: "Enter stock/inventory value" },
+        loansR: { label: "Receivable Loans (PKR)", placeholder: "Money others owe you" },
+        assets: { label: "Other Assets (PKR)", placeholder: "Investments, property for sale" },
+        debts: { label: "Debts/Loans Payable (PKR)", placeholder: "Money you owe others" }
+      },
+      results: {
+        due: "Your Zakat Due: PKR",
+        eligible: "You are eligible to pay Zakat",
+        below: "Your wealth is below Nisab threshold",
+        notRequired: "You are not required to pay Zakat this year",
+        sadqah: "However you can still give Sadqah",
+        payNow: "Pay Your Zakat Now",
+        impact: "Your Zakat will feed orphans, support widows, and build communities in Muzaffargarh",
+        badge: "Zakat Eligible"
+      },
+      islamic: {
+        hadith: 'The Prophet ﷺ said: "Whoever pays the Zakat on his wealth will have its evil removed from him"',
+        ref: "(Ibn Khuzaymah)"
+      }
+    },
+    sponsorPage: {
+      hero: {
+        heading: "Be the Reason a Child Smiles",
+        subtext: "The Prophet ﷺ said: I and the one who sponsors an orphan will be in Paradise like these two — and he gestured with his index and middle fingers (Sahih al-Bukhari)"
+      },
+      tiers: {
+        boys: {
+          title: "Orphan Boys Sponsorship",
+          amount: "Rs. 7,500 / month",
+          badge: "Yateem Khana — Boys Program"
+        },
+        girls: {
+          title: "Orphan Girls Sponsorship",
+          amount: "Rs. 8,500 / month",
+          badge: "Zainab e Alia — Girls Program",
+          popular: "Most Popular"
+        },
+        education: {
+          title: "Education Sponsorship",
+          amount: "Rs. 2,500 / month",
+          badge: "Zainab e Alia School"
+        },
+        includes: "Includes:",
+        cta: {
+          boys: "Sponsor a Boy",
+          girls: "Sponsor a Girl",
+          edu: "Sponsor Education"
+        }
+      },
+      form: {
+        title: "Sponsorship Form",
+        name: "Full Name",
+        phone: "Phone Number",
+        email: "Email Address",
+        cnic: "CNIC Number (optional)",
+        program: "Select Program",
+        howHeard: "How did you hear about us?",
+        message: "Message (optional)",
+        submit: "Start Sponsorship",
+        programs: {
+          boys: "Yateem Khana Boys (Rs.7,500)",
+          girls: "Zainab e Alia Girls (Rs.8,500)",
+          edu: "Education Support (Rs.2,500)"
+        },
+        sources: {
+          fb: "Facebook",
+          wa: "WhatsApp",
+          friend: "Friend",
+          web: "Website",
+          other: "Other"
+        },
+        success: "JazakAllah Khair! Your sponsorship application has been received. We will contact you within 24 hours on your provided phone number to confirm your sponsorship and share payment details."
+      }
+    },
+    qurbaniPage: {
+      hero: {
+        badge: "Qurbani 2026 — Alhamdulillah Complete",
+        heading: "Qurbani 2026 — Your Sacrifice, Their Blessing",
+        subtext: "Alhamdulillah, Aal e Imran Welfare successfully performed Qurbani on behalf of donors and distributed fresh meat to orphans, widows and deserving families across Muzaffargarh in Eid ul Adha 2026."
+      },
+      stats: {
+        animals: "Animals Sacrificed",
+        families: "Families Received Meat",
+        areas: "Cities/Areas Covered",
+        year: "Year"
+      },
+      gallery: {
+        title: "Qurbani 2026 — In Pictures",
+        defaultCaption: "Qurbani 2026 — Aal e Imran Welfare, Muzaffargarh"
+      },
+      howItWorks: {
+        title: "How Your Qurbani Works",
+        step1: { title: "You Register", desc: "Register your Qurbani online or via WhatsApp before Eid ul Adha" },
+        step2: { title: "You Pay", desc: "Transfer payment to our UBL account. We confirm receipt immediately." },
+        step3: { title: "We Sacrifice", desc: "Qurbani performed on Eid day according to full Shariah guidelines by qualified persons" },
+        step4: { title: "We Distribute", desc: "Fresh meat distributed same day to orphans, widows and deserving families in Muzaffargarh" }
+      },
+      prices: {
+        title: "Qurbani 2026 Prices (Reference)",
+        note: "2026 Qurbani is complete. Register your interest for Qurbani 2027 and we will contact you with pricing closer to Eid ul Adha 2027.",
+        contact: "Contact for 2027 pricing",
+        done: "2026 Done ✓",
+        card1: "Goat / Sheep",
+        card1Desc: "1 share = 1 person's Qurbani",
+        card2: "Cow Share — 1/7",
+        card2Desc: "1/7 share = 1 person's Qurbani",
+        card3: "Full Cow",
+        card3Desc: "7 shares = 7 people's Qurbani"
+      },
+      register: {
+        title: "Register Interest for Qurbani 2027",
+        subtitle: "Be among the first to know when Qurbani 2027 registration opens. We will contact you with confirmed prices and availability before Eid ul Adha 2027.",
+        name: "Full Name",
+        phone: "Phone Number",
+        whatsapp: "WhatsApp Number (if different)",
+        email: "Email (optional)",
+        type: "Qurbani Type Interest",
+        shares: "Number of Shares",
+        city: "City/Area",
+        submit: "Register My Interest",
+        types: {
+          goat: "Goat/Sheep",
+          cowShare: "Cow Share",
+          fullCow: "Full Cow"
+        },
+        success: "JazakAllah Khair! We have registered your interest for Qurbani 2027. We will contact you on your WhatsApp/phone number with pricing and details before Eid ul Adha 2027. May Allah accept your Qurbani."
+      },
+      islamic: {
+        ayah: "So pray to your Lord and sacrifice [to Him alone]",
+        ref: "(Surah Al-Kawthar 108:2)",
+        hadith: '"It is the Sunnah of your father Ibrahim. For every hair of the Qurbani you will receive a reward from Allah"',
+        hadithRef: "(Ibn Majah)"
+      }
+    }
   },
   UR: {
     nav: {
@@ -303,6 +458,8 @@ export const translations = {
       blog: "بلاگ",
       events: "تقاریب",
       qurbani: "قربانی",
+      sponsor: "کفالت",
+      zakat: "زکوٰۃ",
       donate: "عطیہ",
       contact: "رابطہ",
       donateNow: "ابھی عطیہ دیں",
@@ -584,5 +741,158 @@ export const translations = {
       }
     },
     whatsappTooltip: "ہم سے واٹس ایپ پر بات کریں",
+    zakat: {
+      heading: "اپنی زکوٰۃ 2026 حساب کریں",
+      subtitle: "اپنی دینی ذمہ داری آسانی سے ادا کریں۔ زکوٰۃ نصاب سے زائد تمام مال کا 2.5 فیصد ہے جو ایک قمری سال تک آپ کے پاس رہا ہو۔",
+      nisabBox: {
+        title: "موجودہ نصاب 2026",
+        gold: "سونے کا نصاب: 87.48 گرام سونا",
+        silver: "چاندی کا نصاب: 612.36 گرام چاندی",
+        instruction: "دونوں میں سے کم قیمت والا نصاب استعمال کریں۔",
+        goldRate: "سونے کی موجودہ قیمت: 21,000 روپے فی گرام (تقریباً)",
+        silverRate: "چاندی کی موجودہ قیمت: 250 روپے فی گرام (تقریباً)",
+        goldValue: "سونے کے نصاب کی مالیت: ~1,837,080 روپے",
+        silverValue: "چاندی کے نصاب کی مالیت: ~153,090 روپے",
+        finalNisab: "نصاب (چاندی کے لحاظ سے): ~153,090 روپے",
+        note: "سونے اور چاندی کی قیمتیں تقریبی ہیں۔ براہ کرم حساب کرنے سے پہلے موجودہ قیمتوں کی تصدیق کر لیں۔"
+      },
+      fields: {
+        cash: { label: "نقدی اور بینک بیلنس (روپے)", placeholder: "کل نقدی اور بچت درج کریں" },
+        gold: { label: "سونے کی مالیت (روپے)", placeholder: "موجودہ مارکیٹ ویلیو درج کریں" },
+        silver: { label: "چاندی کی مالیت (روپے)", placeholder: "موجودہ مارکیٹ ویلیو درج کریں" },
+        business: { label: "کاروباری مال (روپے)", placeholder: "سٹاک یا انوینٹری کی مالیت درج کریں" },
+        loansR: { label: "قابل وصول قرضے (روپے)", placeholder: "وہ رقم جو دوسروں نے آپ کو دینی ہے" },
+        assets: { label: "دیگر اثاثے (روپے)", placeholder: "سرمایہ کاری، فروخت کے لیے جائیداد" },
+        debts: { label: "قابل ادا قرضے (روپے)", placeholder: "وہ رقم جو آپ نے دوسروں کو دینی ہے" }
+      },
+      results: {
+        due: "آپ کی واجب الادا زکوٰۃ: روپے",
+        eligible: "آپ زکوٰۃ ادا کرنے کے اہل ہیں",
+        below: "آپ کا مال نصاب سے کم ہے",
+        notRequired: "اس سال آپ پر زکوٰۃ فرض نہیں ہے",
+        sadqah: "تاہم آپ پھر بھی صدقہ دے سکتے ہیں",
+        payNow: "اپنی زکوٰۃ ابھی ادا کریں",
+        impact: "آپ کی زکوٰۃ مظفرگڑھ میں یتیموں کی کفالت، بیواؤں کی مدد اور معاشرے کی تعمیر میں صرف ہوگی",
+        badge: "زکوٰۃ کے اہل"
+      },
+      islamic: {
+        hadith: 'نبی کریم ﷺ نے فرمایا: "جس نے اپنے مال کی زکوٰۃ ادا کر دی، اس سے اس کا شر دور ہو گیا"',
+        ref: "(ابن خزیمہ)"
+      }
+    },
+    sponsorPage: {
+      hero: {
+        heading: "ایک بچے کی مسکراہٹ کی وجہ بنیں",
+        subtext: 'نبی کریم ﷺ نے فرمایا: "میں اور یتیم کی کفالت کرنے والا جنت میں ان دو (انگلیوں) کی طرح ہوں گے" — اور آپ ﷺ نے اپنی شہادت کی انگلی اور درمیان والی انگلی سے اشارہ فرمایا (صحیح البخاری)'
+      },
+      tiers: {
+        boys: {
+          title: "یتیم لڑکوں کی کفالت",
+          amount: "7,500 روپے / ماہ",
+          badge: "یتیم خانہ — بوائز پروگرام"
+        },
+        girls: {
+          title: "یتیم لڑکیوں کی کفالت",
+          amount: "8,500 روپے / ماہ",
+          badge: "زینب عالیہ — گرلز پروگرام",
+          popular: "سب سے مقبول"
+        },
+        education: {
+          title: "تعلیمی کفالت",
+          amount: "2,500 روپے / ماہ",
+          badge: "زینب عالیہ سکول"
+        },
+        includes: "شامل ہے:",
+        cta: {
+          boys: "لڑکے کی کفالت کریں",
+          girls: "بچی کی کفالت کریں",
+          edu: "تعلیمی کفالت کریں"
+        }
+      },
+      form: {
+        title: "کفالت فارم",
+        name: "مکمل نام",
+        phone: "فون نمبر",
+        email: "ای میل ایڈریس",
+        cnic: "شناختی کارڈ نمبر (اختیاری)",
+        program: "پروگرام منتخب کریں",
+        howHeard: "آپ نے ہمارے بارے میں کیسے سنا؟",
+        message: "پیغام (اختیاری)",
+        submit: "کفالت شروع کریں",
+        programs: {
+          boys: "یتیم لڑکے (7,500 روپے)",
+          girls: "زینب عالیہ بچیاں (8,500 روپے)",
+          edu: "تعلیمی تعاون (2,500 روپے)"
+        },
+        sources: {
+          fb: "فیس بک",
+          wa: "واٹس ایپ",
+          friend: "دوست",
+          web: "ویب سائٹ",
+          other: "دیگر"
+        },
+        success: "جزاک اللہ خیر! آپ کی کفالت کی درخواست موصول ہوگئی ہے۔ ہم آپ کے فراہم کردہ فون نمبر پر 24 گھنٹے کے اندر رابطہ کریں گے تاکہ کفالت کی تصدیق کی جا سکے اور ادائیگی کی تفصیلات شیئر کی جا سکیں۔"
+      }
+    },
+    qurbaniPage: {
+      hero: {
+        badge: "قربانی 2026 — الحمدللہ مکمل",
+        heading: "قربانی 2026 — آپ کی قربانی، ان کی خوشی",
+        subtext: "الحمدللہ، آل عمران ویلفیئر نے عطیہ دہندگان کی جانب سے کامیابی کے ساتھ قربانی ادا کی اور عید الاضحی 2026 میں مظفرگڑھ بھر میں یتیموں، بیواؤں اور مستحق خاندانوں میں تازہ گوشت تقسیم کیا۔"
+      },
+      stats: {
+        animals: "قربانی کیے گئے جانور",
+        families: "گوشت وصول کرنے والے خاندان",
+        areas: "علاقے",
+        year: "سال"
+      },
+      gallery: {
+        title: "قربانی 2026 — تصویروں میں",
+        defaultCaption: "قربانی 2026 — آل عمران ویلفیئر، مظفرگڑھ"
+      },
+      howItWorks: {
+        title: "آپ کی قربانی کیسے ہوتی ہے",
+        step1: { title: "آپ اندراج کرتے ہیں", desc: "عید الاضحی سے پہلے آن لائن یا واٹس ایپ کے ذریعے اپنی قربانی کا اندراج کریں" },
+        step2: { title: "آپ ادائیگی کرتے ہیں", desc: "ہمارے یو بی ایل (UBL) اکاؤنٹ میں رقم منتقل کریں۔ ہم فوری طور پر وصولی کی تصدیق کرتے ہیں۔" },
+        step3: { title: "ہم قربانی کرتے ہیں", desc: "قربانی عید کے دن مکمل شرعی اصولوں کے مطابق ماہر افراد کے ذریعے کی جاتی ہے" },
+        step4: { title: "ہم تقسیم کرتے ہیں", desc: "تازہ گوشت اسی دن مظفرگڑھ میں یتیموں، بیواؤں اور مستحق خاندانوں میں تقسیم کیا جاتا ہے" }
+      },
+      prices: {
+        title: "قربانی 2026 قیمتیں (حوالہ)",
+        note: "2026 کی قربانی مکمل ہو چکی ہے۔ 2027 کی قربانی کے لیے اپنی دلچسپی کا اندراج کریں اور ہم عید الاضحی 2027 کے قریب قیمتوں کے ساتھ آپ سے رابطہ کریں گے۔",
+        contact: "2027 کی قیمتوں کے لیے رابطہ کریں",
+        done: "2026 مکمل ✓",
+        card1: "بکرا / دنبہ",
+        card1Desc: "1 حصہ = 1 فرد کی قربانی",
+        card2: "گائے کا حصہ — 1/7",
+        card2Desc: "1/7 حصہ = 1 فرد کی قربانی",
+        card3: "پوری گائے",
+        card3Desc: "7 حصے = 7 افراد کی قربانی"
+      },
+      register: {
+        title: "قربانی 2027 کے لیے اندراج کریں",
+        subtitle: "قربانی 2027 کی رجسٹریشن شروع ہوتے ہی سب سے پہلے جاننے کے لیے اندراج کریں۔ ہم عید الاضحی 2027 سے پہلے تصدیق شدہ قیمتوں اور دستیابی کے ساتھ آپ سے رابطہ کریں گے۔",
+        name: "مکمل نام",
+        phone: "فون نمبر",
+        whatsapp: "واٹس ایپ نمبر (اگر مختلف ہو)",
+        email: "ای میل (اختیاری)",
+        type: "قربانی کی قسم",
+        shares: "حصوں کی تعداد",
+        city: "شہر / علاقہ",
+        submit: "اندراج کریں",
+        types: {
+          goat: "بکرا / دنبہ",
+          cowShare: "گائے کا حصہ",
+          fullCow: "پوری گائے"
+        },
+        success: "جزاک اللہ خیر! ہم نے قربانی 2027 کے لیے آپ کی دلچسپی کا اندراج کر لیا ہے۔ ہم عید الاضحی 2027 سے پہلے قیمتوں اور تفصیلات کے ساتھ آپ کے واٹس ایپ/فون نمبر پر رابطہ کریں گے۔ اللہ آپ کی قربانی قبول فرمائے۔"
+      },
+      islamic: {
+        ayah: "فَصَلِّ لِرَبِّكَ وَانْحَرْ",
+        ref: "(سورۃ الکوثر 108:2)",
+        hadith: '"یہ تمہارے باپ ابراہیم علیہ السلام کی سنت ہے۔ قربانی کے ہر بال کے بدلے تمہارے لیے اللہ کے ہاں اجر ہے"',
+        hadithRef: "(ابن ماجہ)"
+      }
+    }
   },
 };
