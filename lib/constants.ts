@@ -44,3 +44,14 @@ export const IMPACT_STATS = [
   { icon: "📅", value: "2008", labelEn: "Year Founded", labelUr: "سال تاسیس" },
   { icon: "🤲", value: "100%", labelEn: "For Allah's Pleasure", labelUr: "اللہ کی رضا کے لیے" }
 ]
+
+// Update rates here when gold/silver prices change
+export const ZAKAT_CONFIG = {
+  nisabSilverGrams: 612.36,
+  nisabGoldGrams: 87.48,
+  goldRatePerGram: 21000,
+  silverRatePerGram: 250,
+  nisabValuePKR: 153090,
+  zakatPercentage: 2.5,
+  lastUpdated: "2026"
+}

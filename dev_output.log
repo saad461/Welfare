@@ -1,0 +1,49 @@
+
+> temp-app@0.1.0 dev
+> next dev
+
+  ▲ Next.js 14.2.3
+  - Local:        http://localhost:3000
+
+ ✓ Starting...
+> [PWA] PWA support is disabled
+> [PWA] PWA support is disabled
+ ✓ Ready in 3s
+ ○ Compiling / ...
+ ✓ Compiled / in 7.5s (1557 modules)
+ GET / 200 in 8346ms
+ ✓ Compiled in 773ms (750 modules)
+ ○ Compiling /sponsor ...
+ ✓ Compiled /sponsor in 1681ms (1612 modules)
+Supabase URL or Anon Key is missing or set to placeholder. Please check your environment variables in .env.local.
+ GET /sponsor 200 in 2150ms
+ GET / 200 in 98ms
+ GET /sponsor 200 in 66ms
+ ○ Compiling /qurbani ...
+ ✓ Compiled /qurbani in 1190ms (1623 modules)
+Supabase URL or Anon Key is missing or set to placeholder. Please check your environment variables in .env.local.
+ GET /qurbani 200 in 1514ms
+ GET / 200 in 150ms
+ GET /sponsor 200 in 65ms
+ GET /qurbani 200 in 52ms
+ ✓ Compiled in 945ms (1637 modules)
+ ✓ Compiled in 441ms (1637 modules)
+ ✓ Compiled in 455ms (1637 modules)
+ ✓ Compiled in 942ms (1637 modules)
+ ⨯ ./app/page.tsx
+Error:
+  [31mx[0m The "use client" directive must be placed before other expressions. Move it to the top of the file to resolve this issue.
+    ,-[[36;1;4m/app/app/page.tsx[0m:6:1]
+ [2m 6[0m | import ImpactStats from "@/components/ImpactStats";
+ [2m 7[0m | import ProjectsPreview from "@/components/ProjectsPreview";
+ [2m 8[0m | import VideoSection from "@/components/VideoSection";
+ [2m 9[0m | 'use client';
+    : [31;1m^^^^^^^^^^^^^[0m
+ [2m10[0m |
+ [2m11[0m | import DonationSection from "@/components/DonationSection";
+ [2m12[0m | import Footer from "@/components/Footer";
+    `----
+
+Import trace for requested module:
+./app/page.tsx
+ ✓ Compiled in 1287ms (1624 modules)

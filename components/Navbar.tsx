@@ -34,12 +34,13 @@ export default function Navbar() {
   const navLinks = [
     { name: t.nav.home, href: isHomePage ? '#home' : '/' },
     { name: t.nav.about, href: isHomePage ? '#about' : '/#about' },
-    { name: t.nav.team, href: '/team' },
     { name: t.nav.projects, href: '/projects' },
+    { name: t.nav.sponsor, href: '/sponsor' },
+    { name: t.nav.zakat, href: '/zakat' },
     { name: t.nav.gallery, href: isHomePage ? '#gallery' : '/#gallery' },
     { name: t.nav.blog, href: isHomePage ? '#blog' : '/#blog' },
     { name: t.nav.events, href: isHomePage ? '#events' : '/#events' },
-    { name: t.nav.qurbani, href: isHomePage ? '#qurbani' : '/#qurbani' },
+    { name: t.nav.qurbani, href: '/qurbani' },
     { name: t.nav.donate, href: isHomePage ? '#donate' : '/#donate' },
     { name: t.nav.contact, href: isHomePage ? '#contact' : '/#contact' },
   ];
