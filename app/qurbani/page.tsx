@@ -13,13 +13,11 @@ export const metadata: Metadata = {
 
 export default function QurbaniPage() {
   return (
-    <main className="min-h-screen">
+    <>
       <Navbar />
-      <div className="pt-20">
-        <QurbaniProgram />
-      </div>
+      <QurbaniProgram />
       <Footer />
       <WhatsAppButton />
-    </main>
+    </>
   );
 }
