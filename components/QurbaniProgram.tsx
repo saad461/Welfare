@@ -104,8 +104,8 @@ export default function QurbaniProgram() {
   return (
     <div className="bg-white overflow-x-hidden">
       {/* SECTION 1 — Hero Banner */}
-      <section className="relative min-h-[70vh] flex items-center justify-center py-20 px-6 overflow-hidden">
-        <div className="absolute inset-0 -z-10">
+      <section className="relative min-h-[80dvh] flex items-center justify-center pt-32 pb-20 px-6 overflow-hidden bg-primary">
+        <div className="absolute inset-0 z-0">
           <Image
             src="/images/qurbani/IMG-20250607-WA0060.webp"
             alt="Qurbani Program Hero"
@@ -113,7 +113,7 @@ export default function QurbaniProgram() {
             className="object-cover"
             priority
           />
-          <div className="absolute inset-0 bg-black/60 backdrop-blur-[2px]" />
+          <div className="absolute inset-0 bg-gradient-to-b from-black/70 via-black/50 to-black/70 backdrop-blur-[1px]" />
         </div>
         <div className="max-w-7xl mx-auto text-center text-white relative z-10">
           <motion.div
