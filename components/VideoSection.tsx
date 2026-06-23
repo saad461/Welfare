@@ -56,7 +56,7 @@ export default function VideoSection() {
   ];
 
   return (
-    <section className="py-24 px-6 bg-background">
+    <section className="py-16 md:py-24 px-6 bg-background">
       <div className="max-w-7xl mx-auto">
         <div className="text-center mb-16">
           <h2 className={isUrdu ? "urdu text-primary mb-4" : "text-primary mb-4"}>
