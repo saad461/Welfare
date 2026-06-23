@@ -33,7 +33,7 @@ export default function Navbar() {
 
   const navLinks = [
     { name: t.nav.home, href: isHomePage ? '#home' : '/' },
-    { name: t.nav.about, href: isHomePage ? '#about' : '/#about' },
+    { name: t.nav.about, href: '/about' },
     { name: t.nav.projects, href: '/projects' },
     { name: t.nav.sponsor, href: '/sponsor' },
     { name: t.nav.zakat, href: '/zakat' },
