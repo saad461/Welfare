@@ -1,6 +1,7 @@
 'use client';
 
 import React, { useState } from 'react';
+import Image from 'next/image';
 import { motion } from 'framer-motion';
 import { Check, Calendar, Users, MapPin, Loader2, ArrowRight } from 'lucide-react';
 import { useLanguage } from '@/context/LanguageContext';
@@ -89,12 +90,32 @@ export default function QurbaniProgram() {
     { title: t.qurbaniPage.prices.card3, desc: t.qurbaniPage.prices.card3Desc }
   ];
 
+  const galleryImages = [
+    "/images/qurbani/IMG-20250607-WA0060.webp",
+    "/images/qurbani/IMG-20250607-WA0044.webp",
+    "/images/qurbani/IMG-20250607-WA0067.webp",
+    "/images/qurbani/IMG-20250607-WA0072.webp",
+    "/images/qurbani/IMG-20250607-WA0073.webp",
+    "/images/qurbani/IMG-20250607-WA0106.webp",
+    "/images/qurbani/IMG-20250607-WA0095.webp",
+    "/images/qurbani/IMG-20250607-WA0053.webp"
+  ];
+
   return (
-    <div className="bg-white">
+    <div className="bg-white overflow-x-hidden">
       {/* SECTION 1 — Hero Banner */}
-      <section className="relative py-24 px-6 overflow-hidden">
-        <div className="absolute inset-0 bg-gradient-to-br from-primary to-green-800 -z-10" />
-        <div className="max-w-7xl mx-auto text-center text-white">
+      <section className="relative min-h-[70vh] flex items-center justify-center py-20 px-6 overflow-hidden">
+        <div className="absolute inset-0 -z-10">
+          <Image
+            src="/images/qurbani/IMG-20250607-WA0060.webp"
+            alt="Qurbani Program Hero"
+            fill
+            className="object-cover"
+            priority
+          />
+          <div className="absolute inset-0 bg-black/60 backdrop-blur-[2px]" />
+        </div>
+        <div className="max-w-7xl mx-auto text-center text-white relative z-10">
           <motion.div
             initial={{ opacity: 0, y: 20 }}
             animate={{ opacity: 1, y: 0 }}
@@ -124,9 +145,9 @@ export default function QurbaniProgram() {
       </section>
 
       {/* SECTION 2 — 2026 Impact Stats Row */}
-      <section className="py-12 px-6 bg-white border-b border-gray-100">
+      <section className="py-12 px-4 md:px-6 bg-white border-b border-gray-100">
         <div className="max-w-7xl mx-auto">
-          <div className="grid grid-cols-2 lg:grid-cols-4 gap-6">
+          <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-4 md:gap-6">
             {[
               { label: t.qurbaniPage.stats.animals, value: "10+", icon: <Calendar className="text-secondary" /> },
               { label: t.qurbaniPage.stats.families, value: "50+", icon: <Users className="text-secondary" /> },
@@ -150,41 +171,48 @@ export default function QurbaniProgram() {
       </section>
 
       {/* SECTION 3 — Qurbani 2026 Photo Gallery */}
-      <section className="py-24 px-6 bg-background">
+      <section className="py-20 md:py-24 px-6 bg-background">
         <div className="max-w-7xl mx-auto">
-          <div className="text-center mb-16">
-            <h2 className={`text-4xl md:text-5xl font-display font-bold text-dark mb-4 ${isUrdu ? 'urdu' : ''}`}>
+          <div className="text-center mb-12 md:mb-16">
+            <h2 className={`text-3xl md:text-5xl font-display font-bold text-dark mb-4 ${isUrdu ? 'urdu' : ''}`}>
               {t.qurbaniPage.gallery.title}
             </h2>
             <div className="w-24 h-1.5 bg-secondary mx-auto rounded-full" />
           </div>
 
-          <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-6">
-            {/* TODO: Add qurbani 2026 images here */}
-            {[1, 2, 3, 4].map((i) => (
-              <div key={i} className="group relative aspect-square rounded-3xl overflow-hidden bg-primary/10 border border-primary/5">
-                <div className="absolute inset-0 bg-gradient-to-br from-primary/20 to-primary/40 flex items-center justify-center p-6 text-center">
-                  <p className={`text-primary font-bold text-sm ${isUrdu ? 'urdu' : ''}`}>
-                    {t.qurbaniPage.gallery.defaultCaption}
-                  </p>
-                </div>
-              </div>
+          <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-4 md:gap-6">
+            {galleryImages.map((src, i) => (
+              <motion.div
+                key={i}
+                initial={{ opacity: 0, scale: 0.95 }}
+                whileInView={{ opacity: 1, scale: 1 }}
+                transition={{ delay: i * 0.05 }}
+                className="group relative aspect-[4/3] sm:aspect-square rounded-2xl md:rounded-3xl overflow-hidden shadow-lg"
+              >
+                <Image
+                  src={src}
+                  alt={`Qurbani Impact ${i + 1}`}
+                  fill
+                  className="object-cover transition-transform duration-500 group-hover:scale-110"
+                />
+                <div className="absolute inset-0 bg-black/20 group-hover:bg-black/0 transition-colors duration-300" />
+              </motion.div>
             ))}
           </div>
         </div>
       </section>
 
       {/* SECTION 4 — How It Works */}
-      <section className="py-24 px-6 bg-white">
+      <section className="py-20 md:py-24 px-6 bg-white">
         <div className="max-w-7xl mx-auto">
-          <div className="text-center mb-16">
-            <h2 className={`text-4xl md:text-5xl font-display font-bold text-dark mb-4 ${isUrdu ? 'urdu' : ''}`}>
+          <div className="text-center mb-12 md:mb-16">
+            <h2 className={`text-3xl md:text-5xl font-display font-bold text-dark mb-4 ${isUrdu ? 'urdu' : ''}`}>
               {t.qurbaniPage.howItWorks.title}
             </h2>
             <div className="w-24 h-1.5 bg-secondary mx-auto rounded-full" />
           </div>
 
-          <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8">
+          <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-6 md:gap-8">
             {steps.map((step, idx) => (
               <motion.div
                 key={step.id}
@@ -204,16 +232,16 @@ export default function QurbaniProgram() {
       </section>
 
       {/* SECTION 5 — Qurbani Prices Reference */}
-      <section className="py-24 px-6 bg-background">
+      <section className="py-20 md:py-24 px-6 bg-background">
         <div className="max-w-7xl mx-auto">
-          <div className="text-center mb-16">
-            <h2 className={`text-4xl md:text-5xl font-display font-bold text-dark mb-4 ${isUrdu ? 'urdu' : ''}`}>
+          <div className="text-center mb-12 md:mb-16">
+            <h2 className={`text-3xl md:text-5xl font-display font-bold text-dark mb-4 ${isUrdu ? 'urdu' : ''}`}>
               {t.qurbaniPage.prices.title}
             </h2>
             <div className="w-24 h-1.5 bg-secondary mx-auto rounded-full" />
           </div>
 
-          <div className="grid grid-cols-1 md:grid-cols-3 gap-8 mb-12">
+          <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-6 md:gap-8 mb-12">
             {referencePrices.map((price, idx) => (
               <div key={idx} className="bg-white p-8 rounded-3xl shadow-xl border border-gray-100 grayscale opacity-70 relative overflow-hidden">
                 <div className="absolute top-4 right-4 bg-gray-200 text-gray-600 px-3 py-1 rounded-full text-xs font-bold">
@@ -233,8 +261,8 @@ export default function QurbaniProgram() {
       </section>
 
       {/* SECTION 6 — Register for Qurbani 2027 */}
-      <section id="register-2027" className="py-24 px-6 bg-white">
-        <div className="max-w-4xl mx-auto bg-white rounded-3xl shadow-2xl overflow-hidden border border-gray-100">
+      <section id="register-2027" className="py-20 md:py-24 px-4 md:px-6 bg-white">
+        <div className="max-w-4xl mx-auto bg-white rounded-2xl md:rounded-3xl shadow-2xl overflow-hidden border border-gray-100">
           <div className="bg-primary p-8 md:p-12 text-white text-center">
             <h2 className={`text-3xl md:text-5xl font-display font-bold mb-4 ${isUrdu ? 'urdu' : ''}`}>
               {t.qurbaniPage.register.title}
@@ -244,7 +272,7 @@ export default function QurbaniProgram() {
             </p>
           </div>
 
-          <div className="p-8 md:p-12">
+          <div className="p-6 md:p-12">
             {success ? (
               <motion.div
                 initial={{ opacity: 0, scale: 0.9 }}
@@ -275,8 +303,9 @@ export default function QurbaniProgram() {
 
                 <div className="grid grid-cols-1 md:grid-cols-2 gap-6">
                   <div>
-                    <label className={`block text-sm font-bold text-dark mb-2 ${isUrdu ? 'urdu' : ''}`}>{t.qurbaniPage.register.name} *</label>
+                    <label htmlFor="name" className={`block text-sm font-bold text-dark mb-2 ${isUrdu ? 'urdu' : ''}`}>{t.qurbaniPage.register.name} *</label>
                     <input
+                      id="name"
                       required
                       type="text"
                       name="name"
@@ -286,8 +315,9 @@ export default function QurbaniProgram() {
                     />
                   </div>
                   <div>
-                    <label className={`block text-sm font-bold text-dark mb-2 ${isUrdu ? 'urdu' : ''}`}>{t.qurbaniPage.register.phone} *</label>
+                    <label htmlFor="phone" className={`block text-sm font-bold text-dark mb-2 ${isUrdu ? 'urdu' : ''}`}>{t.qurbaniPage.register.phone} *</label>
                     <input
+                      id="phone"
                       required
                       type="text"
                       name="phone"
@@ -323,7 +353,7 @@ export default function QurbaniProgram() {
 
                 <div>
                   <label className={`block text-sm font-bold text-dark mb-2 ${isUrdu ? 'urdu' : ''}`}>{t.qurbaniPage.register.type}</label>
-                  <div className="flex flex-wrap gap-4">
+                  <div className="flex flex-wrap gap-3 md:gap-4">
                     {Object.entries(t.qurbaniPage.register.types).map(([key, label]) => (
                       <label key={key} className="flex items-center gap-2 cursor-pointer group">
                         <div className="relative">
@@ -390,10 +420,10 @@ export default function QurbaniProgram() {
       </section>
 
       {/* SECTION 7 — Islamic Content */}
-      <section className="py-24 px-6 bg-background">
+      <section className="py-20 md:py-24 px-6 bg-background">
         <div className="max-w-4xl mx-auto text-center">
-          <div className="mb-12">
-            <h3 className="text-3xl md:text-5xl font-display text-primary mb-4 urdu leading-relaxed">فَصَلِّ لِرَبِّكَ وَانْحَرْ</h3>
+          <div className="mb-8 md:mb-12">
+            <h3 className="text-3xl md:text-5xl font-display text-primary mb-4 urdu leading-relaxed px-4">فَصَلِّ لِرَبِّكَ وَانْحَرْ</h3>
             <p className={`text-xl text-gray-600 ${isUrdu ? 'urdu' : ''}`}>
               {t.qurbaniPage.islamic.ayah}
               <span className="block text-sm mt-2 opacity-60">{t.qurbaniPage.islamic.ref}</span>
