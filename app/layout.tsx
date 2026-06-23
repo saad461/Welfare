@@ -23,6 +23,7 @@ const notoUrdu = Noto_Nastaliq_Urdu({
 });
 
 export const metadata: Metadata = {
+  metadataBase: new URL(process.env.NEXT_PUBLIC_SITE_URL || 'https://aaleimranwelfare.org'),
   title: "Aal e Imran Welfare | Orphan Care & Women Empowerment in Pakistan",
   description: "Aal e Imran Welfare is a Pakistani non-profit organization dedicated to caring for orphans through Yateem Khana and empowering women through Zainab e Alia. Donate today and change lives.",
   keywords: "welfare organization Pakistan, orphan care Pakistan, yateem khana, zakat Pakistan, donate Pakistan, Islamic charity, women empowerment Pakistan",

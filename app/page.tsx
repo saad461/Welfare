@@ -8,6 +8,8 @@ import ZakatIntro from "@/components/ZakatIntro";
 import ImpactStats from "@/components/ImpactStats";
 import ProjectsPreview from "@/components/ProjectsPreview";
 import VideoSection from "@/components/VideoSection";
+import GalleryPreview from "@/components/GalleryPreview";
+import BlogPreview from "@/components/BlogPreview";
 import DonationSection from "@/components/DonationSection";
 import Footer from "@/components/Footer";
 import WhatsAppButton from "@/components/WhatsAppButton";
@@ -21,17 +23,39 @@ export default function Home() {
   return (
     <>
       <Navbar />
+
+      {/* 1. Hero */}
       <Hero />
+
+      {/* 2. About */}
       <About />
+
+      {/* 3. What We Do */}
       <WhatWeDo />
 
-      {/* Zakat Section */}
-      <ZakatIntro />
-
+      {/* 4. Impact Stats */}
       <ImpactStats />
+
+      {/* 5. Projects Preview */}
       <ProjectsPreview />
 
-      {/* Sponsorship Preview Section */}
+      {/* 6. Video Section */}
+      <VideoSection />
+
+      {/* 7. Gallery Preview */}
+      <section id="gallery">
+        <GalleryPreview />
+      </section>
+
+      {/* 8. Blog Preview */}
+      <section id="blog">
+        <BlogPreview />
+      </section>
+
+      {/* 9. Zakat Intro */}
+      <ZakatIntro />
+
+      {/* 10. Sponsorship Preview */}
       <section className="py-16 md:py-24 px-6 bg-background">
         <div className="max-w-7xl mx-auto text-center">
           <h2 className={`text-4xl md:text-5xl font-display font-bold text-dark mb-6 ${isUrdu ? 'urdu' : ''}`}>
@@ -85,22 +109,7 @@ export default function Home() {
         </div>
       </section>
 
-      <VideoSection />
-
-      {/* Phase 1 Placeholders for other sections */}
-      <section id="gallery" className="py-16 md:py-24 px-6 bg-white flex items-center justify-center border-b border-gray-100">
-        <h2 className="text-gray-300 font-display">Gallery Section [Phase 4]</h2>
-      </section>
-
-      <section id="blog" className="py-16 md:py-24 px-6 bg-background flex items-center justify-center border-b border-gray-100">
-        <h2 className="text-gray-300 font-display">Blog Section [Phase 5]</h2>
-      </section>
-
-      <section id="events" className="py-16 md:py-24 px-6 bg-white flex items-center justify-center border-b border-gray-100">
-        <h2 className="text-gray-300 font-display">Events Section [Phase 6]</h2>
-      </section>
-
-      {/* Qurbani Preview Section */}
+      {/* 11. Qurbani Preview */}
       <section id="qurbani" className="py-16 md:py-24 px-6 bg-background">
         <div className="max-w-7xl mx-auto">
           <div className="bg-primary rounded-[3rem] p-8 md:p-16 text-white overflow-hidden relative">
@@ -129,12 +138,12 @@ export default function Home() {
         </div>
       </section>
 
-      <section id="contact" className="py-16 md:py-24 px-6 bg-white flex items-center justify-center">
-        <h2 className="text-gray-300 font-display">Contact Section [Phase 10]</h2>
-      </section>
-
+      {/* 12. Donation Section */}
       <DonationSection />
+
+      {/* 13. Footer */}
       <Footer />
+
       <WhatsAppButton />
     </>
   );

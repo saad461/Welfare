@@ -262,6 +262,65 @@ export const translations = {
       learnMore: "Learn More",
       viewAll: "View All Projects",
     },
+    gallery: {
+      hero: {
+        heading: "Our Gallery",
+        subtext: "A visual journey through our work — every photo tells a story of hope, care and humanity",
+        breadcrumb: "Home > Gallery"
+      },
+      tabs: {
+        all: "All",
+        yateemkhana: "Yateem Khana",
+        zainabalia: "Zainab e Alia",
+        events: "Events & Relief",
+        qurbani: "Qurbani"
+      },
+      card: {
+        view: "View",
+        date: "Date"
+      },
+      homepage: {
+        title: "Our Gallery",
+        subtitle: "Glimpses of our work in Muzaffargarh",
+        viewAll: "View Full Gallery"
+      }
+    },
+    blog: {
+      hero: {
+        heading: "Our Blog",
+        subtext: "Islamic articles, welfare updates and stories of impact from Muzaffargarh",
+        breadcrumb: "Home > Blog"
+      },
+      categories: {
+        all: "All Articles",
+        orphanCare: "Orphan Care",
+        zakatGiving: "Zakat & Giving",
+        womenEmpowerment: "Women Empowerment",
+        fieldReports: "Field Reports",
+        newsUpdates: "News & Updates"
+      },
+      card: {
+        author: "Aal e Imran Welfare Team",
+        readMore: "Read More"
+      },
+      sidebar: {
+        recentPosts: "Recent Posts",
+        supportUs: "Support Us",
+        sponsorCTA: "Sponsor an Orphan",
+        newsletter: "Newsletter Signup",
+        newsletterDesc: "Get updates in your inbox",
+        subscribe: "Subscribe"
+      },
+      post: {
+        share: "Share This Post",
+        supportWork: "Support Our Work — Donate Today"
+      },
+      homepage: {
+        title: "Latest Articles",
+        subtitle: "News and insights from our mission",
+        viewAll: "Read All Articles"
+      }
+    },
     videos: {
       heading: "See Our Work in Action",
       card1: {
@@ -840,6 +899,65 @@ export const translations = {
       subheading: "طویل مدتی اثرات اور وقار فراہم کرنے کے لیے بنائے گئے اقدامات۔",
       learnMore: "مزید جانیں",
       viewAll: "تمام منصوبے دیکھیں",
+    },
+    gallery: {
+      hero: {
+        heading: "ہماری گیلری",
+        subtext: "ہمارے کام کا بصری سفر — ہر تصویر امید، محبت اور انسانیت کی کہانی سناتی ہے",
+        breadcrumb: "ہوم > گیلری"
+      },
+      tabs: {
+        all: "سب",
+        yateemkhana: "یتیم خانہ",
+        zainabalia: "زینب عالیہ",
+        events: "تقریبات",
+        qurbani: "قربانی"
+      },
+      card: {
+        view: "دیکھیں",
+        date: "تاریخ"
+      },
+      homepage: {
+        title: "ہماری گیلری",
+        subtitle: "مظفرگڑھ میں ہمارے کام کی جھلکیاں",
+        viewAll: "مکمل گیلری دیکھیں"
+      }
+    },
+    blog: {
+      hero: {
+        heading: "ہمارا بلاگ",
+        subtext: "مظفرگڑھ سے اسلامی مضامین، فلاحی اپڈیٹس اور اثرات کی کہانیاں",
+        breadcrumb: "ہوم > بلاگ"
+      },
+      categories: {
+        all: "تمام مضامین",
+        orphanCare: "یتیم کفالت",
+        zakatGiving: "زکوٰۃ و صدقہ",
+        womenEmpowerment: "خواتین",
+        fieldReports: "فیلڈ رپورٹ",
+        newsUpdates: "خبریں"
+      },
+      card: {
+        author: "آل عمران ویلفیئر ٹیم",
+        readMore: "مزید پڑھیں"
+      },
+      sidebar: {
+        recentPosts: "حالیہ تحاریر",
+        supportUs: "ہمارا ساتھ دیں",
+        sponsorCTA: "یتیم کی کفالت کریں",
+        newsletter: "نیوز لیٹر",
+        newsletterDesc: "تازہ ترین خبریں اپنے ان باکس میں حاصل کریں",
+        subscribe: "سبسکرائب کریں"
+      },
+      post: {
+        share: "اس تحریر کو شیئر کریں",
+        supportWork: "ہمارے کام کی حمایت کریں — آج ہی عطیہ دیں"
+      },
+      homepage: {
+        title: "حالیہ مضامین",
+        subtitle: "ہمارے مشن سے تازہ ترین خبریں",
+        viewAll: "تمام مضامین پڑھیں"
+      }
     },
     videos: {
       heading: "ہمارا کام اپنی آنکھوں سے دیکھیں",
