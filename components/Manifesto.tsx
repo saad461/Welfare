@@ -14,8 +14,24 @@ import {
   Heart,
   CloudRain
 } from 'lucide-react';
+import { clsx, type ClassValue } from 'clsx';
+import { twMerge } from 'tailwind-merge';
 
-export default function Manifesto() {
+function cn(...inputs: ClassValue[]) {
+  return twMerge(clsx(inputs));
+}
+
+interface ManifestoProps {
+  showTitle?: boolean;
+  background?: 'green' | 'white';
+  columns?: 2 | 3;
+}
+
+export default function Manifesto({
+  showTitle = true,
+  background = 'green',
+  columns = 3
+}: ManifestoProps) {
   const { t, isUrdu } = useLanguage();
 
   const points = [
@@ -31,21 +47,32 @@ export default function Manifesto() {
   ];
 
   return (
-    <section className="py-24 px-6 bg-primary text-white overflow-hidden">
+    <section className={cn(
+      "py-24 px-6 overflow-hidden",
+      background === 'green' ? "bg-primary text-white" : "bg-white text-dark"
+    )}>
       <div className="max-w-7xl mx-auto">
-        <div className="text-center mb-16">
-          <motion.h2
-            initial={{ y: 20, opacity: 0 }}
-            whileInView={{ y: 0, opacity: 1 }}
-            viewport={{ once: true }}
-            className={isUrdu ? "urdu text-white mb-4" : "text-white mb-4"}
-          >
-            {t.manifesto.heading}
-          </motion.h2>
-          <div className="w-20 h-1 bg-secondary mx-auto"></div>
-        </div>
+        {showTitle && (
+          <div className="text-center mb-16">
+            <motion.h2
+              initial={{ y: 20, opacity: 0 }}
+              whileInView={{ y: 0, opacity: 1 }}
+              viewport={{ once: true }}
+              className={cn(
+                isUrdu ? "urdu mb-4" : "mb-4",
+                background === 'green' ? "text-white" : "text-primary"
+              )}
+            >
+              {t.manifesto.heading}
+            </motion.h2>
+            <div className="w-20 h-1 bg-secondary mx-auto"></div>
+          </div>
+        )}
 
-        <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
+        <div className={cn(
+          "grid grid-cols-1 gap-8",
+          columns === 2 ? "md:grid-cols-2" : "md:grid-cols-2 lg:grid-cols-3"
+        )}>
           {points.map((point, index) => {
             const Icon = point.icon;
             const content = (t.manifesto.points as any)[point.key];
@@ -57,16 +84,27 @@ export default function Manifesto() {
                 whileInView={{ opacity: 1, y: 0 }}
                 viewport={{ once: true }}
                 transition={{ delay: index * 0.1 }}
-                className="flex items-start gap-6 p-6 rounded-2xl bg-white/5 border border-white/10 hover:bg-white/10 transition-colors group"
+                className={cn(
+                  "flex items-start gap-6 p-6 rounded-2xl border transition-colors group",
+                  background === 'green'
+                    ? "bg-white/5 border-white/10 hover:bg-white/10"
+                    : "bg-background border-gray-100 hover:border-primary/20"
+                )}
               >
                 <div className="w-14 h-14 bg-secondary/20 text-secondary rounded-xl flex items-center justify-center flex-shrink-0 group-hover:scale-110 transition-transform">
                   <Icon size={28} />
                 </div>
                 <div>
-                  <h4 className={isUrdu ? "urdu font-bold text-xl mb-2 text-secondary" : "font-bold text-xl mb-2 text-secondary"}>
+                  <h4 className={cn(
+                    isUrdu ? "urdu font-bold text-xl mb-2" : "font-bold text-xl mb-2",
+                    "text-secondary"
+                  )}>
                     {content.title}
                   </h4>
-                  <p className={isUrdu ? "urdu text-sm text-white/80 leading-relaxed" : "text-sm text-white/80 leading-relaxed"}>
+                  <p className={cn(
+                    isUrdu ? "urdu text-sm leading-relaxed" : "text-sm leading-relaxed",
+                    background === 'green' ? "text-white/80" : "text-dark/70"
+                  )}>
                     {content.desc}
                   </p>
                 </div>

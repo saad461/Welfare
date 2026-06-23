@@ -294,6 +294,133 @@ export const translations = {
       }
     },
     whatsappTooltip: "Chat with us on WhatsApp",
+    aboutPage: {
+      hero: {
+        badge: "SINCE 2008",
+        heading: "About Aal e Imran Welfare",
+        subheading: "A non-political, non-sectarian welfare organization serving humanity purely for the pleasure of Allah Almighty",
+        breadcrumbHome: "Home",
+        breadcrumbAbout: "About"
+      },
+      intro: {
+        eyebrow: "WHO WE ARE",
+        heading: "Serving Humanity Since 2008",
+        p1: "Aal-e-Imran Welfare Organization was founded in April 2008 in Muzaffargarh, Punjab, Pakistan with one unwavering mission — to serve the creation of Allah. What began as a small Madrasah in Mohalla Ghazi Abad has grown into a fully registered welfare organization touching thousands of lives across Pakistan.",
+        p2: "We are a completely non-political, non-sectarian welfare organization that works beyond the prejudice of caste, race and religion. Our sole purpose is to gain the pleasure of Allah Almighty by serving 100% of humanity — providing care, education, and support to orphans, widows, and the underprivileged of our society.",
+        p3: "The greatest means of pleasing Allah is the service of His creation. Aal-e-Imran Welfare Organization Muzaffargarh Punjab took this decision and started a movement to change the condition of poor, orphans and needy people. The aim is not for personal gain but to gain the pleasure of Allah Almighty and to serve humanity by establishing institutions for orphan children and equipping them with religious and worldly education.",
+        tagline: "Together, we can change lives",
+        statFounded: "Founded 2008",
+        statLocation: "Muzaffargarh, Punjab"
+      },
+      missionVision: {
+        mission: {
+          title: "Our Mission",
+          content: "To serve 100% of humanity by establishing institutions for orphan children, providing clean water, food, education and support to the poor, widows and underprivileged — purely for the pleasure of Allah Almighty."
+        },
+        vision: {
+          title: "Our Vision",
+          content: "A Pakistan where no orphan is without shelter, no widow is without support, and no deserving child is without education. A society built on compassion, justice and the fear of Allah."
+        },
+        values: {
+          title: "Our Values",
+          list: [
+            { title: "Faith", desc: "Rooted in Islamic principles", ur: "ایمان" },
+            { title: "Compassion", desc: "Serving with love", ur: "محبت" },
+            { title: "Transparency", desc: "Every rupee accountable", ur: "شفافیت" },
+            { title: "Non-sectarian", desc: "Beyond division", ur: "غیر فرقہ وارانہ" },
+            { title: "Non-political", desc: "Above politics", ur: "غیر سیاسی" },
+            { title: "Selfless", desc: "No personal gain", ur: "بے غرض" }
+          ]
+        }
+      },
+      foundation: {
+        heading: "Our Work — An Act of Worship",
+        subtitle: "Every meal served, every hand pump installed, every orphan cared for — is done solely for the pleasure of Allah Almighty",
+        quran: {
+          arabic: "وَيُطْعِمُونَ الطَّعَامَ عَلَىٰ حُبِّهِ مِسْكِينًا وَيَتِيمًا وَأَسِيرًا",
+          translation: "And they give food in spite of love for it to the needy, the orphan, and the captive",
+          ref: "Surah Al-Insan (76:8)"
+        },
+        hadith1: {
+          arabic: "أَنَا وَكَافِلُ الْيَتِيمِ فِي الْجَنَّةِ هَكَذَا",
+          translation: "I and the one who sponsors an orphan will be in Paradise like these two — and he gestured with his index and middle fingers",
+          ref: "Prophet Muhammad ﷺ (Sahih al-Bukhari)"
+        },
+        hadith2: {
+          translation: "The Messenger of Allah ﷺ used to serve financially to such an extent that if even a dirham was left in the house at night, he would not sleep until it reached the needy.",
+          ref: "(Hadith)"
+        }
+      },
+      timeline: {
+        heading: "Our Journey — Key Milestones",
+        items: [
+          {
+            year: "April 2008",
+            title: "Foundation",
+            desc: "Aal-e-Imran Welfare Organization founded in Muzaffargarh, Punjab. Started as a Madrasah in Mohalla Ghazi Abad dedicated to serving orphans and the underprivileged."
+          },
+          {
+            year: "2016",
+            title: "Regional Expansion",
+            desc: "Workshops conducted across multiple districts of Punjab and Sindh for women of various communities, providing moral, spiritual and vocational training."
+          },
+          {
+            year: "2023-2024",
+            title: "Water Access Drive",
+            desc: "Installed 77 hand pumps across deserving homes and communities in Muzaffargarh and surrounding areas, providing 24/7 clean water access."
+          },
+          {
+            year: "2024",
+            title: "Zainab e Alia Established",
+            desc: "Zainab e Alia orphanage and Higher Secondary School established to protect and educate orphaned girls with dignity and full care."
+          },
+          {
+            year: "2025",
+            title: "New Building Completed",
+            desc: "Brand new purpose-built facility completed with modern infrastructure to better serve orphans and underprivileged children with quality education and care."
+          },
+          {
+            year: "2026",
+            title: "Growing & Thriving",
+            desc: "Continuing to expand our reach across Muzaffargarh and Pakistan. 100+ orphans in care, 20+ widows supported monthly, and thousands of lives touched by the grace of Allah."
+          }
+        ]
+      },
+      howWeWork: {
+        heading: "How We Work",
+        cards: [
+          {
+            title: "Non-Political",
+            desc: "We are completely non-political. No political affiliation, no political agenda. Our only allegiance is to humanity and to Allah."
+          },
+          {
+            title: "Non-Sectarian",
+            desc: "We serve beyond the boundaries of caste, sect and race. Every human being in need is deserving of our help regardless of background."
+          },
+          {
+            title: "100% For Allah",
+            desc: "Our work is not for personal gain, recognition or fame. Every action is done solely to earn the pleasure of Allah Almighty."
+          },
+          {
+            title: "Transparent",
+            desc: "Every donation is utilized with full accountability. We believe in complete transparency in how your trust and money is used."
+          }
+        ]
+      },
+      team: {
+        heading: "Meet Our Team",
+        button: "Meet Full Team"
+      },
+      cta: {
+        heading: "Join Us in Making a Difference",
+        subtext: "Whether you donate, volunteer, or simply spread the word — every action counts. Together we can build a better Pakistan for our orphans, widows and those in need.",
+        buttons: {
+          donate: "Donate Now",
+          sponsor: "Sponsor Orphan",
+          contact: "Contact Us"
+        }
+      }
+    },
     zakat: {
       heading: "Calculate Your Zakat 2026",
       subtitle: "Fulfill your religious obligation with ease. Zakat is 2.5% of all qualifying wealth held for one full lunar year above the Nisab threshold.",
@@ -746,6 +873,133 @@ export const translations = {
       }
     },
     whatsappTooltip: "ہم سے واٹس ایپ پر بات کریں",
+    aboutPage: {
+      hero: {
+        badge: "2008 سے",
+        heading: "آل عمران ویلفیئر کے بارے میں",
+        subheading: "ایک غیر سیاسی، غیر فرقہ وارانہ فلاحی تنظیم جو صرف اللہ کی رضا کے لیے انسانیت کی خدمت کرتی ہے",
+        breadcrumbHome: "ہوم",
+        breadcrumbAbout: "ہمارے بارے میں"
+      },
+      intro: {
+        eyebrow: "ہم کون ہیں",
+        heading: "2008 سے انسانیت کی خدمت",
+        p1: "آل عمران ویلفیئر آرگنائزیشن اپریل 2008 میں مظفرگڑھ، پنجاب میں قائم کی گئی۔ محلہ غازی آباد میں ایک چھوٹے مدرسے سے شروع ہونے والا یہ سفر آج ایک مکمل رجسٹرڈ فلاحی تنظیم کی شکل اختیار کر چکا ہے۔",
+        p2: "ہم ایک مکمل غیر سیاسی، غیر فرقہ وارانہ فلاحی تنظیم ہیں جو ذات، نسل اور مذہب کے تعصب سے بالاتر ہو کر کام کرتی ہے۔ ہمارا مقصد اللہ کی رضا حاصل کرنا اور انسانیت کی 100 فیصد خدمت کرنا ہے۔",
+        p3: "اللہ تعالیٰ کی خوشنودی کا سب سے بڑا ذریعہ خلق خدا کی خدمت ہے۔ آل عمران ویلفیئر آرگنائزیشن نے غریب، یتیم اور نادار لوگوں کی حالت بدلنے کی تحریک شروع کی۔ مقصد ذاتی فائدہ نہیں بلکہ اللہ کی رضا اور انسانیت کی خدمت ہے۔",
+        tagline: "مل کر ہم زندگیاں بدل سکتے ہیں",
+        statFounded: "قائم شدہ 2008",
+        statLocation: "مظفرگڑھ، پنجاب"
+      },
+      missionVision: {
+        mission: {
+          title: "ہمارا مشن",
+          content: "یتیم بچوں کے لیے ادارے قائم کر کے، غریبوں کو صاف پانی، خوراک، تعلیم اور سہارا دے کر 100 فیصد انسانیت کی خدمت کرنا — صرف اللہ کی رضا کے لیے۔"
+        },
+        vision: {
+          title: "ہماری سوچ",
+          content: "ایک ایسا پاکستان جہاں کوئی یتیم بے گھر نہ ہو، کوئی بیوہ بے سہارا نہ ہو، اور کوئی مستحق بچہ تعلیم سے محروم نہ ہو۔ ایک ایسا معاشرہ جو ہمدردی، انصاف اور خوف خدا پر مبنی ہو۔"
+        },
+        values: {
+          title: "ہماری اقدار",
+          list: [
+            { title: "ایمان", desc: "اسلامی اصولوں پر مبنی", ur: "ایمان" },
+            { title: "محبت", desc: "محبت کے ساتھ خدمت", ur: "محبت" },
+            { title: "شفافیت", desc: "ایک ایک روپے کا حساب", ur: "شفافیت" },
+            { title: "غیر فرقہ وارانہ", desc: "تقسیم سے بالاتر", ur: "غیر فرقہ وارانہ" },
+            { title: "غیر سیاسی", desc: "سیاست سے بالاتر", ur: "غیر سیاسی" },
+            { title: "بے غرض", desc: "ذاتی فائدے کے بغیر", ur: "بے غرض" }
+          ]
+        }
+      },
+      foundation: {
+        heading: "ہمارا کام — ایک عبادت",
+        subtitle: "ہر کھانا، ہر ہینڈ پمپ، ہر یتیم کی کفالت — صرف اللہ کی رضا کے لیے",
+        quran: {
+          arabic: "وَيُطْعِمُونَ الطَّعَامَ عَلَىٰ حُبِّهِ مِسْكِينًا وَيَتِيمًا وَأَسِيرًا",
+          translation: "اور وہ اس کی محبت میں (خود اپنی ضرورت کے باوجود) مسکین، یتیم اور قیدی کو کھانا کھلاتے ہیں۔",
+          ref: "سورۃ الانسان (76:8)"
+        },
+        hadith1: {
+          arabic: "أَنَا وَكَافِلُ الْيَتِيمِ فِي الْجَنَّةِ هَكَذَا",
+          translation: 'نبی کریم ﷺ نے فرمایا: "میں اور یتیم کی کفالت کرنے والا جنت میں ان دو (انگلیوں) کی طرح ہوں گے" — اور آپ ﷺ نے اپنی شہادت کی انگلی اور درمیان والی انگلی سے اشارہ فرمایا',
+          ref: "(صحیح البخاری)"
+        },
+        hadith2: {
+          translation: "اللہ کے رسول ﷺ اس حد تک مالی خدمت فرماتے تھے کہ اگر رات کو گھر میں ایک درہم بھی بچ جاتا تو آپ ﷺ اس وقت تک نہ سوتے جب تک وہ ضرورت مندوں تک نہ پہنچ جاتا۔",
+          ref: "(حدیث)"
+        }
+      },
+      timeline: {
+        heading: "ہمارا سفر — اہم سنگ میل",
+        items: [
+          {
+            year: "اپریل 2008",
+            title: "بنیاد",
+            desc: "مظفرگڑھ، پنجاب میں آل عمران ویلفیئر آرگنائزیشن کی بنیاد رکھی گئی۔ محلہ غازی آباد میں ایک مدرسے سے شروع کیا گیا جو یتیموں اور پسماندہ افراد کی خدمت کے لیے وقف تھا۔"
+          },
+          {
+            year: "2016",
+            title: "علاقائی توسیع",
+            desc: "پنجاب اور سندھ کے متعدد اضلاع میں مختلف کمیونٹیز کی خواتین کے لیے ورکشاپس کا انعقاد کیا گیا، جس میں اخلاقی، روحانی اور پیشہ ورانہ تربیت فراہم کی گئی۔"
+          },
+          {
+            year: "2023-2024",
+            title: "صاف پانی مہم",
+            desc: "مظفرگڑھ اور گردونواح کے مستحق گھروں اور کمیونٹیز میں 77 ہینڈ پمپ نصب کیے گئے، جو 24/7 صاف پانی کی رسائی فراہم کرتے ہیں۔"
+          },
+          {
+            year: "2024",
+            title: "زینب عالیہ کا قیام",
+            desc: "زینب عالیہ یتیم خانہ اور ہائر سیکنڈری سکول قائم کیا گیا تاکہ یتیم بچیوں کی وقار اور مکمل دیکھ بھال کے ساتھ حفاظت اور تعلیم دی جا سکے۔"
+          },
+          {
+            year: "2025",
+            title: "نئی عمارت مکمل",
+            desc: "جدید انفراسٹرکچر کے ساتھ نئی مقصد کے لیے بنائی گئی عمارت مکمل ہوئی تاکہ یتیموں اور پسماندہ بچوں کو معیاری تعلیم اور دیکھ بھال کے ساتھ بہتر خدمات فراہم کی جا سکیں۔"
+          },
+          {
+            year: "2026",
+            title: "ترقی کا سفر جاری",
+            desc: "مظفرگڑھ اور پاکستان بھر میں اپنی پہنچ کو بڑھانا جاری رکھے ہوئے ہیں۔ 100 سے زیادہ یتیم بچے زیر کفالت، 20 سے زیادہ بیواؤں کی ماہانہ امداد، اور اللہ کے فضل سے ہزاروں زندگیوں کو چھوا۔"
+          }
+        ]
+      },
+      howWeWork: {
+        heading: "ہم کیسے کام کرتے ہیں",
+        cards: [
+          {
+            title: "غیر سیاسی",
+            desc: "ہم مکمل طور پر غیر سیاسی ہیں۔ کوئی سیاسی وابستگی نہیں، کوئی سیاسی ایجنڈا نہیں۔ ہماری واحد وفاداری انسانیت اور اللہ سے ہے۔"
+          },
+          {
+            title: "غیر فرقہ وارانہ",
+            desc: "ہم ذات، فرقے اور نسل کی حدود سے بالاتر ہو کر خدمت کرتے ہیں۔ ہر ضرورت مند انسان ہماری مدد کا مستحق ہے قطع نظر اس کے پس منظر کے۔"
+          },
+          {
+            title: "100% اللہ کے لیے",
+            desc: "ہمارا کام ذاتی فائدے، پہچان یا شہرت کے لیے نہیں ہے۔ ہر عمل صرف اللہ تعالی کی رضا حاصل کرنے کے لیے کیا جاتا ہے۔"
+          },
+          {
+            title: "شفاف",
+            desc: "ہر عطیہ مکمل احتساب کے ساتھ استعمال کیا جاتا ہے۔ ہم آپ کے اعتماد اور پیسے کے استعمال میں مکمل شفافیت پر یقین رکھتے ہیں۔"
+          }
+        ]
+      },
+      team: {
+        heading: "ہماری ٹیم سے ملیں",
+        button: "مکمل ٹیم دیکھیں"
+      },
+      cta: {
+        heading: "فرق ڈالنے میں ہمارے ساتھ شامل ہوں",
+        subtext: "چاہے آپ عطیہ دیں، رضاکار بنیں، یا محض پیغام پھیلائیں — ہر عمل اہمیت رکھتا ہے۔ مل کر ہم اپنے یتیموں، بیواؤں اور ضرورت مندوں کے لیے ایک بہتر پاکستان بنا سکتے ہیں۔",
+        buttons: {
+          donate: "ابھی عطیہ دیں",
+          sponsor: "یتیم کی کفالت کریں",
+          contact: "رابطہ کریں"
+        }
+      }
+    },
     zakat: {
       heading: "اپنی زکوٰۃ 2026 حساب کریں",
       subtitle: "اپنی دینی ذمہ داری آسانی سے ادا کریں۔ زکوٰۃ نصاب سے زائد تمام مال کا 2.5 فیصد ہے جو ایک قمری سال تک آپ کے پاس رہا ہو۔",
