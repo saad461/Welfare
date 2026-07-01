@@ -25,7 +25,7 @@ export default function Hero() {
   };
 
   return (
-    <section id="home" className="relative min-h-[100dvh] w-full flex flex-col items-center justify-center overflow-hidden pt-16 md:pt-20">
+    <section id="home" className="relative min-h-[70dvh] md:min-h-[85dvh] w-full flex flex-col items-center justify-start overflow-hidden pt-28 pb-12 md:pt-40 md:pb-20">
       {/* Background with Gradient and Placeholder Overlay */}
       <div
         className="absolute inset-0 z-0 bg-cover bg-center"
@@ -98,7 +98,7 @@ export default function Hero() {
       </motion.div>
 
       {/* Scroll Indicator */}
-      <div className="absolute bottom-10 left-1/2 -translate-x-1/2 text-white animate-bounce-slow">
+      <div className="absolute bottom-6 left-1/2 -translate-x-1/2 text-white animate-bounce-slow">
         <ChevronDown size={32} />
       </div>
     </section>
