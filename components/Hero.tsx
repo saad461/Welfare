@@ -25,7 +25,7 @@ export default function Hero() {
   };
 
   return (
-    <section id="home" className="relative min-h-[100dvh] w-full flex flex-col items-center justify-center overflow-hidden pt-16 md:pt-20">
+    <section id="home" className="relative min-h-[65dvh] md:min-h-[80dvh] w-full flex flex-col items-center justify-start overflow-hidden pt-24 md:pt-32">
       {/* Background with Gradient and Placeholder Overlay */}
       <div
         className="absolute inset-0 z-0 bg-cover bg-center"
